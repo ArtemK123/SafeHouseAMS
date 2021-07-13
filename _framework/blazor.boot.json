@@ -4,7 +4,7 @@
     "appsettings.json"
   ],
   "debugBuild": false,
-  "entryAssembly": "SafeHouseCRM.WasmApp",
+  "entryAssembly": "SafeHouseAMS.WasmApp",
   "icuDataMode": 0,
   "linkerEnabled": true,
   "resources": {
@@ -32,8 +32,8 @@
       "Radzen.Blazor.dll": "sha256-Iaa\/bcXw4u25bRUH4k0IIa1FeNejRW9n8sXgXv89e3A=",
       "System.IO.Pipelines.dll": "sha256-qZYTUS+ga7CydtH54fYPbehFCvx3B49I74G8dxreTog=",
       "System.Linq.Dynamic.Core.dll": "sha256-1FY4njT4yBDGDmit0dChl3nkd8sDwvqj4rl9RhKoJBQ=",
-      "SafeHouseCRM.BizLayer.Abstractions.dll": "sha256-dNU4ithJd0sRWUE1vQztcOoThLaq\/C+Jsjgon3bKxb8=",
-      "SafeHouseCRM.WasmApp.dll": "sha256-pjCjIhI6MGRZgtSalmRNa1VZrBwQU9MsJA5GPgb+Z9M=",
+      "SafeHouseAMS.BizLayer.Abstractions.dll": "sha256-GGljbjuZ\/cPwnZAOT0qBz\/RdS9o8eid8n9jxucmrhk4=",
+      "SafeHouseAMS.WasmApp.dll": "sha256-aqO4JQ3oTQem1144KxTO\/Y\/exdc\/0PGqXtPVDfpukc4=",
       "Microsoft.CSharp.dll": "sha256-sBKmep8tt0oKh+1Ot3N9YhIjZ8fGueIP5mfI2SgjA44=",
       "System.Collections.Concurrent.dll": "sha256-rofBcwVLA42lnY\/QaCynJJIHwZqeW9FtL2VZAiEUtPo=",
       "System.Collections.Immutable.dll": "sha256-jmMDuPry7V54GvbyfzW4bSRyALclikVqltbvNymb0bM=",

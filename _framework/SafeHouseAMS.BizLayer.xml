@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SafeHouseAMS.BizLayer</name>
+    </assembly>
+    <members>
+        <member name="T:SafeHouseAMS.BizLayer.BaseCommand`1">
+            <summary>
+            базовый класс коменды
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.BaseCommand`1.#ctor(System.Guid)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="entityID">идентификатор пострадавшего для которого выполняется команда</param>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.BaseCommand`1.EntityID">
+            <inheritdoc />
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.BaseCommand`1.ApplyOn(`0)">
+            <summary>
+            Применить комадну на репозитории 
+            </summary>
+            <param name="repository">Объект репозитория на который будет применяться команда</param>
+            <returns>Задача, которая будет завершена, когда команда применится</returns>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.BaseDomainModel">
+            <summary>
+            Базовая доменная модель
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.BaseDomainModel.ID">
+            <inheritdoc />
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.BaseDomainModel.IsDeleted">
+            <inheritdoc />
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.BaseDomainModel.Created">
+            <inheritdoc />
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.BaseDomainModel.LastEdit">
+            <inheritdoc />
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.BaseDomainModel.#ctor(System.Guid,System.Boolean,System.DateTimeOffset,System.DateTimeOffset)">
+            <summary>
+            Ctor 
+            </summary>
+            <param name="id">идентификатор записи</param>
+            <param name="isDeleted">признак удаленной записи</param>
+            <param name="created">временная метка создания</param>
+            <param name="lastEdit">временная метка последнего редактирования</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.BizLogicRegistrator">
+            <summary>
+            Регистратор бизнес-логики
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.BizLogicRegistrator.AddBizLogic(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Добавить бизнес-логику в DI
+            </summary>
+            <param name="services">коллекция сервисов DI контейнера</param>
+            <param name="configuration">конфигурация</param>
+            <returns>та же коллекция сервисов для chaining</returns>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.ICommand">
+            <summary>
+            Интерфейс команды
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ICommand.EntityID">
+            <summary>
+            Идентификатор записи для которой выполняется команда
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.IDomainAggregate`2">
+            <summary>
+            Базовый интерфейс доменного огрегата
+            </summary>
+            <typeparam name="TDomainEntity">Тип доменной сущности</typeparam>
+            <typeparam name="TCommand">Базовый тип команды</typeparam>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.IDomainAggregate`2.GetSingleAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Найти сущность по идентификатору
+            </summary>
+            <param name="id">Идентификатор сущности</param>
+            <param name="cancellationToken">Токен отмены</param>
+            <returns>Найденая сущность</returns>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.IDomainAggregate`2.ApplyCommand(`1,System.Threading.CancellationToken)">
+            <summary>
+            Выполнить команду
+            </summary>
+            <param name="command">Команда для выполнения</param>
+            <param name="cancellationToken">Токен отмены</param>
+            <returns>Задача, которая будет завершена, когда команда будет выполнена</returns>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.IDomainModel">
+            <summary>
+            Интерфейс объекта доменной модели
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.IDomainModel.ID">
+            <summary>
+            Идентификатор записи
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.IDomainModel.IsDeleted">
+            <summary>
+            Признак удалённой записи
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.IDomainModel.Created">
+            <summary>
+            Timestamp создания модели
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.IDomainModel.LastEdit">
+            <summary>
+            Timestamp последнего изменения модели
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.Survivors.Commands.CreateSurvivor">
+            <summary>
+            Команда создания нового пострадавшего
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.Survivors.Commands.CreateSurvivor.#ctor(System.Guid,System.String,SafeHouseAMS.BizLayer.Survivors.SexEnum,System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
+            <summary>
+            ctor
+            </summary>
+            <param name="entityID">идентификатор записи</param>
+            <param name="name">Имя</param>
+            <param name="sex">Пол</param>
+            <param name="otherSex">уточнение пола</param>
+            <param name="birthDateAccurate">точная дата рождения</param>
+            <param name="birthDateCalculated">вычисленная приблизительная дата рождения</param>
+            <exception cref="T:System.ArgumentNullException">если имя было null</exception>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.Survivors.Commands.CreateSurvivor.ApplyOn(SafeHouseAMS.BizLayer.Survivors.ISurvivorRepository)">
+            <inheritdoc />
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.Survivors.Commands.SurvivorCommand">
+            <summary>
+            Базовый класс команды агрегата реестра постардавших
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.Survivors.Commands.SurvivorCommand.#ctor(System.Guid)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="entityID">идентификатор пострадавшего для которого выполняется команда</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.Survivors.ISurvivorCatalogue">
+            <summary>
+            Интерфейс агрегата бизнес-логики реестра пострадавих 
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.Survivors.ISurvivorCatalogue.GetCollection">
+            <summary>
+            Получить список пострадавших
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.Survivors.ISurvivorRepository">
+            <summary>
+            Репозиторий карточек пострадавших
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.Survivors.ISurvivorRepository.Create(System.Guid,System.Boolean,System.DateTimeOffset,System.DateTimeOffset,System.String,SafeHouseAMS.BizLayer.Survivors.SexEnum,System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
+            <summary>
+            Создать новую запись
+            </summary>
+            <param name="id">идентификатор</param>
+            <param name="lastEdit">дата время последнего редактирования</param>
+            <param name="name">имя</param>
+            <param name="sex">пол</param>
+            <param name="otherSex">уточнение пола</param>
+            <param name="accurateDob">точная дата рождения</param>
+            <param name="calculatedDob">вычисленная дата рождения</param>
+            <param name="isDeleted">Удалена ли запись</param>
+            <param name="created">дата-время создания</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.Survivors.ISurvivorRepository.GetSingleAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Получить одиночную запись по идентификатору
+            </summary>
+            <param name="id">идентификатор записи</param>
+            <param name="cancellationToken">Токен отмены</param>
+            <returns>Найденая запись</returns>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.Survivors.ISurvivorRepository.GetCollection">
+            <summary>
+            Получить коллекцию записей пострадавших
+            </summary>
+            <returns>Асинхронная последовательность записей пострадавших</returns>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.Survivors.SexEnum">
+            <summary>
+            Перечисление типов пола
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.Survivors.SexEnum.Female">
+            <summary>
+            Женский
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.Survivors.SexEnum.Male">
+            <summary>
+            Мужской
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.Survivors.SexEnum.Other">
+            <summary>
+            Другой
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.Survivors.Survivor">
+            <summary>
+            Карточка пострадавшего
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.Survivors.Survivor.Num">
+            <summary>
+            Номер карточки п/п
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.Survivors.Survivor.Name">
+            <summary>
+            Имя пострадавшего
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.Survivors.Survivor.Sex">
+            <summary>
+            Пол
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.Survivors.Survivor.OtherSex">
+            <summary>
+            Уточнение другого пола
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.Survivors.Survivor.SexDisplay">
+            <summary>
+            Пол для отображения
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.Survivors.Survivor.BirthDateAccurate">
+            <summary>
+            Точная дата рождения - если известна
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.Survivors.Survivor.BirthDateCalculated">
+            <summary>
+            Вычисленная (приблизительная) дата рождения. Если неизвестна точная
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.Survivors.Survivor.Age">
+            <summary>
+            Возраст
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.Survivors.Survivor.#ctor(System.Guid,System.Boolean,System.DateTimeOffset,System.DateTimeOffset,System.String,System.Int32,SafeHouseAMS.BizLayer.Survivors.SexEnum,System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
+            <summary>
+            Ctor
+            </summary>
+            <param name="id">Идентификатор записи</param>
+            <param name="isDeleted">Признак удаленной записи</param>
+            <param name="created">Дата-время создания</param>
+            <param name="lastEdit">Дата время последнего редактирования</param>
+            <param name="name">Имя пострадавшего</param>
+            <param name="num">Номер карточки</param>
+            <param name="sex">Пол</param>
+            <param name="otherSex">Уточнение другого пола</param>
+            <param name="birthDateAccurate">Точная дата рождения, если известно</param>
+            <param name="birthDateCalculated">Приблизительная дата рождения</param>
+        </member>
+    </members>
+</doc>

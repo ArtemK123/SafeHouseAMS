@@ -158,11 +158,19 @@
             Интерфейс агрегата бизнес-логики реестра пострадавих 
             </summary>
         </member>
-        <member name="M:SafeHouseAMS.BizLayer.Survivors.ISurvivorCatalogue.GetCollection">
+        <member name="M:SafeHouseAMS.BizLayer.Survivors.ISurvivorCatalogue.GetCollection(System.Int32,System.Nullable{System.Int32})">
             <summary>
             Получить список пострадавших
             </summary>
+            <param name="skip">Пропустить первых записей</param>
+            <param name="take">Ограничить размер выдачи. Если null - то не ограничивать</param>
             <returns></returns>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.Survivors.ISurvivorCatalogue.GetTotalCount">
+            <summary>
+            Получить общее количество записей в справочнике
+            </summary>
+            <returns>общее количество пострадавших</returns>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.Survivors.ISurvivorRepository">
             <summary>
@@ -191,11 +199,19 @@
             <param name="cancellationToken">Токен отмены</param>
             <returns>Найденая запись</returns>
         </member>
-        <member name="M:SafeHouseAMS.BizLayer.Survivors.ISurvivorRepository.GetCollection">
+        <member name="M:SafeHouseAMS.BizLayer.Survivors.ISurvivorRepository.GetCollection(System.Int32,System.Nullable{System.Int32})">
             <summary>
             Получить коллекцию записей пострадавших
             </summary>
+            <param name="skip">Пропустить первые записи</param>
+            <param name="take">Ограничить количество. Если null - не ограничивать</param>
             <returns>Асинхронная последовательность записей пострадавших</returns>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.Survivors.ISurvivorRepository.GetTotalCount">
+            <summary>
+            Получить общее количество записей в справочнике
+            </summary>
+            <returns>общее количество пострадавших</returns>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.Survivors.SexEnum">
             <summary>

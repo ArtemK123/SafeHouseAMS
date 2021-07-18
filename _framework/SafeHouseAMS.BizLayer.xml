@@ -122,6 +122,728 @@
             Timestamp последнего изменения модели
             </summary>
         </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateInquiry">
+            <summary>
+            Создать новы документ обращения
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateInquiry.SurvivorID">
+            <summary>
+            пострадавший
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateInquiry.DocumentDate">
+            <summary>
+            Дата документа
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateInquiry.IsJuvenile">
+            <summary>
+            несовершеннолетний на момент обращения
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateInquiry.InquirySources">
+            <summary>
+            источники обращения
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateInquiry.Citizenship">
+            <summary>
+            гражданство
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateInquiry.#ctor(System.Guid,System.DateTimeOffset,System.Guid,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.InquirySources.IInquirySource},System.String)">
+            <summary>
+            ctor
+            </summary>
+            <param name="entityID">идентификтаор документа</param>
+            <param name="documentDate">дата документа</param>
+            <param name="survivorId">пострадавший</param>
+            <param name="isJuvenile">несовершеннолетний на момент обращения</param>
+            <param name="inquirySources">источники обращения</param>
+            <param name="citizenship">гражданство</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.LifeSituationDocumentCommand">
+            <summary>
+            Базовая команда изменения документа жизненной ситуации
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.LifeSituationDocumentCommand.#ctor(System.Guid)">
+            <summary>
+            ctor
+            </summary>
+            <param name="entityID">идентификатор документа на котором выполняется команда</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsAggregate">
+            <summary>
+            Агрегат документов жизненных ситуаций 
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsAggregate.GetAllBySurvivor(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Получить всю коллекцию документов по пострадавшему
+            </summary>
+            <param name="survivorId">Идентификатор пострадавшего</param>
+            <param name="cancellationToken">токен отмены операции</param>
+            <returns>Асинхронный поток документов, относящихся к пострадавшему</returns>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository">
+            <summary>
+            Репозиторий документов жизненных ситуаций
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.GetSingleAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Получить одиночный документ по идентификатору
+            </summary>
+            <param name="id">идентификатор документа</param>
+            <param name="cancellationToken">токен отмены операции</param>
+            <returns>Полученный документ по идентификатору</returns>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.GetAllBySurvivor(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Получить все документы по пострадавшему
+            </summary>
+            <param name="survivorId">идентификатор пострадавшего</param>
+            <param name="cancellationToken">токен отмены</param>
+            <returns>асинхронная последовательность документов</returns>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.CreateInquiry(System.Guid,System.Boolean,System.DateTimeOffset,System.DateTimeOffset,System.Guid,System.DateTimeOffset,System.Boolean,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.InquirySources.IInquirySource})">
+            <summary>
+            СОздать документ обращения
+            </summary>
+            <param name="documentId">идентификатор документа</param>
+            <param name="isDeleted">признак удаленной записи</param>
+            <param name="created">создан</param>
+            <param name="lastEdit">последнее редактирование</param>
+            <param name="survivorID">идентификатор пострадавшего</param>
+            <param name="documentDate">дата документа</param>
+            <param name="isJuvenile">несовершеннолетний в момент обращения</param>
+            <param name="inquirySources">источники обращения</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.AddRecord(System.Guid,SafeHouseAMS.BizLayer.LifeSituations.Records.BaseRecord)">
+            <summary>
+            Добавить новую запись о жизненной ситуации
+            </summary>
+            <param name="documentId">Идентификатор документа, создавшего запись</param>
+            <param name="record">Собственно объект записи</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Inquiry">
+            <summary>
+            Обращение за помощью
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.IsJuvenile">
+            <summary>
+            несовершеннолетний на момент обращения
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.InquirySources">
+            <summary>
+            Источники обращения
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.Сitizenship">
+            <summary>
+            Гражданство в момент обращения
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.Domicile">
+            <summary>
+            Место проживания в момент обращения + где проиживает
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.HasChildren">
+            <summary>
+            Наличие детей
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.EducationLevel">
+            <summary>
+            Уровень образования
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.Specialities">
+            <summary>
+            Специальности
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.WorkingExperience">
+            <summary>
+            Опыт работы
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.VulnerabilityFactors">
+            <summary>
+            Иные факторы уязвимости
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.#ctor(System.Guid,System.Boolean,System.DateTimeOffset,System.DateTimeOffset,System.DateTimeOffset,SafeHouseAMS.BizLayer.Survivors.Survivor,System.Boolean,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.InquirySources.IInquirySource},SafeHouseAMS.BizLayer.LifeSituations.Records.CitizenshipRecord,SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord,SafeHouseAMS.BizLayer.LifeSituations.Records.ChildrenRecord,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord},System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Records.SpecialityRecord},System.String,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Vulnerability})">
+            <summary>
+            ctor
+            </summary>
+            <param name="id">идентификатор</param>
+            <param name="isDeleted">признак удалённой записи</param>
+            <param name="created">дата создания записи</param>
+            <param name="lastEdit">дата последнего редактирования</param>
+            <param name="documentDate">дата обращения</param>
+            <param name="survivor">пострадавший</param>
+            <param name="isJuvenile">несовершеннолетний на момент обращения</param>
+            <param name="inquirySources">источники обращения</param>
+            <param name="сitizenship">гразданство</param>
+            <param name="domicile">место жительства, если известно</param>
+            <param name="hasChildren">статус по детям</param>
+            <param name="educationLevel">статус образования</param>
+            <param name="specialities">специальности</param>
+            <param name="workingExperience">опыт работы</param>
+            <param name="vulnerabilityFactors">факторы уязвимости</param>
+            <exception cref="T:System.ArgumentNullException">если нет гражданства или источников обращения</exception>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.ForwardedByOrganization">
+            <summary>
+            Перенаправлен другой организацией
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.ForwardedByOrganization.#ctor(System.String)">
+            <summary>
+            ctor
+            </summary>
+            <param name="forwardedBy">организация, перенаправившая человека</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.ForwardedByPerson">
+            <summary>
+            Перенаправлен другим человеком
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.ForwardedByPerson.#ctor(System.String)">
+            <summary>
+            ctor
+            </summary>
+            <param name="forwardedBy">перенаправивший человек</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.ForwardedBySurvivor">
+            <summary>
+            Перенаправлен другим пострадавшим
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.ForwardedBySurvivor.#ctor(System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="forwardedBy">Перенаправивший пострадавший</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.ForwardedInquiry">
+            <summary>
+            Общий класс перенаправленного обращения
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.ForwardedInquiry.#ctor(System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="forwardedBy">кем перенаправлен - название организации или человек</param>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.ForwardedInquiry.ForwardedBy">
+            <summary>
+            Источник перенаправления - организация, человек
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.IInquirySource">
+            <summary>
+            Источник обращения - маркерный интерфейс
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.SelfInquiry">
+            <summary>
+            Самообращение
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.SelfInquiry.InquiryChannel">
+            <summary>
+            Канал самообращения
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.SelfInquiry.InquiryChannel.None">
+            <summary>
+            не указан
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.SelfInquiry.InquiryChannel.Vk">
+            <summary>
+            Вконтакте
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.SelfInquiry.InquiryChannel.Facebook">
+            <summary>
+            Фейсбук
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.SelfInquiry.InquiryChannel.Instagramm">
+            <summary>
+            Инстаграмм
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.SelfInquiry.InquiryChannel.Email">
+            <summary>
+            Почта
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.SelfInquiry.InquiryChannel.Phone">
+            <summary>
+            Телефон
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.SelfInquiry.InquiryChannel.Whatsapp">
+            <summary>
+            Вотсапп
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.SelfInquiry.InquiryChannel.Viber">
+            <summary>
+            Вайбер
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.SelfInquiry.InquiryChannel.Telegramm">
+            <summary>
+            Телеграмм
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.SelfInquiry.InquiryChannel.Signal">
+            <summary>
+            Сигнал
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.SelfInquiry.Channel">
+            <summary>
+            Собственно канал самообращения 
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.SelfInquiry.#ctor(SafeHouseAMS.BizLayer.LifeSituations.InquirySources.SelfInquiry.InquiryChannel)">
+            <summary>
+            Самообращение
+            </summary>
+            <param name="channel">Канал самообращения</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.LifeSituationDocument">
+            <summary>
+            Базовый класс документов, меняющих жизненную ситуацию
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.LifeSituationDocument.DocumentDate">
+            <summary>
+            Дата документа
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.LifeSituationDocument.Survivor">
+            <summary>
+            Пострадавший к которому относится эта запись
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.LifeSituationDocument.#ctor(System.Guid,System.Boolean,System.DateTimeOffset,System.DateTimeOffset,System.DateTimeOffset,SafeHouseAMS.BizLayer.Survivors.Survivor)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="id">Идентификатор записи</param>
+            <param name="isDeleted">признак удалённой записи</param>
+            <param name="created">дата создания</param>
+            <param name="lastEdit">дата последнего редактирования</param>
+            <param name="documentDate">дата действия документа</param>
+            <param name="survivor">Пострадавший, к которому относится этот документ</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Records.BaseRecord">
+            <summary>
+            Базовый класс записи о жизненной ситуации
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.BaseRecord.ID">
+            <summary>
+            Идентификатор записи
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Records.BaseRecord.#ctor(System.Guid)">
+            <summary>
+            ctor
+            </summary>
+            <param name="id">идентификатор записи</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Records.ChildrenRecord">
+            <summary>
+            наличие детей
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.ChildrenRecord.HasChildren">
+            <summary>
+            Есть ли дети
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.ChildrenRecord.Details">
+            <summary>
+            Описание - пол, возраст, количество
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Records.ChildrenRecord.#ctor(System.Guid,System.Boolean,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="id">идентификатор записи</param>
+            <param name="hasChildren">есть ли дети вообще</param>
+            <param name="details">подробнее о детях</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Records.CitizenshipRecord">
+            <summary>
+            Запись о гражданстве
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.CitizenshipRecord.Citizenship">
+            <summary>
+            Гражданство
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Records.CitizenshipRecord.#ctor(System.Guid,System.String)">
+            <summary>
+            ctor
+            </summary>
+            <param name="id">идентификатор записи</param>
+            <param name="citizenship">гражданство</param>
+            <exception cref="T:System.ArgumentNullException">если передан null</exception>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord">
+            <summary>
+            Место жительства
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.PlaceKind">
+            <summary>
+            Тип места проживания
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.PlaceKind.Homeless">
+            <summary>
+            Бездомный
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.PlaceKind.Temporary">
+            <summary>
+            Временно живёт у кого то
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.PlaceKind.Dorm">
+            <summary>
+            Общежитие
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.PlaceKind.RentRoom">
+            <summary>
+            Аренда комнаты
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.PlaceKind.RentFlat">
+            <summary>
+            Аренда квартиры
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.PlaceKind.OwnHome">
+            <summary>
+            Собственное жильё
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.Place">
+            <summary>
+            место жительства
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.Kind">
+            <summary>
+            Тип места проживания
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.LivesAlone">
+            <summary>
+            Живет од_на
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.WithPartner">
+            <summary>
+            С супругом/партнером
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.WithChildren">
+            <summary>
+            С детьми
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.ChildrenDetails">
+            <summary>
+            Подробнее о детях
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.WithParents">
+            <summary>
+            с родителями
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.ParentsDetails">
+            <summary>
+            подробнее о родителях
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.WithOtherRelatives">
+            <summary>
+            с другими родственниками
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.OtherRelativesDetails">
+            <summary>
+            подробнее о других родственниках
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.WithOtherPeople">
+            <summary>
+            с какими то другими людьми
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.OtherPeopleDetails">
+            <summary>
+            подробнее о других людях
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.#ctor(System.Guid,System.String,System.Nullable{SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.PlaceKind},System.Boolean,System.Boolean,System.Boolean,System.String,System.Boolean,System.String,System.Boolean,System.String,System.Boolean,System.String)">
+            <summary>
+            ctor
+            </summary>
+            <param name="id">идентификатор записи</param>
+            <param name="place">место жительства</param>
+            <param name="kind">тип места жительства</param>
+            <param name="livesAlone">живет од_на</param>
+            <param name="withPartner">с партнером</param>
+            <param name="withChildren">с детьми</param>
+            <param name="childrenDetails">о детях</param>
+            <param name="withParents">с родителями</param>
+            <param name="parentsDetails">о родителях</param>
+            <param name="withOtherRelatives">с другими родственниками</param>
+            <param name="otherRelativesDetails">о других родственниках</param>
+            <param name="withOtherPeople">с другими людьми</param>
+            <param name="otherPeopleDetails">о других людях</param>
+            <exception cref="T:System.ArgumentNullException">если место жительства было null</exception>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord">
+            <summary>
+            Уровень образования
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord.EduLevel">
+            <summary>
+            Тип образования
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord.EduLevel.None">
+            <summary>
+            нет
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord.EduLevel.SchoolLess9">
+            <summary>
+            школа меньше 9 классов
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord.EduLevel.School9">
+            <summary>
+            9 классов школы
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord.EduLevel.School11">
+            <summary>
+            11 классов школы
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord.EduLevel.Special">
+            <summary>
+            Среднее-специальное
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord.EduLevel.HighNotEnded">
+            <summary>
+            Неоконченное высшее
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord.EduLevel.High">
+            <summary>
+            Высшее
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord.EduLevel.Courses">
+            <summary>
+            курсы
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord.Level">
+            <summary>
+            Уровень полученного образования
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord.Details">
+            <summary>
+            Дополнительная информация об уровне образования
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord.#ctor(System.Guid,SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord.EduLevel,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="id">идентификатор записи</param>
+            <param name="level">Уровень полученного образования</param>
+            <param name="details">Подробности - количество классов или названия курсов</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Records.SpecialityRecord">
+            <summary>
+            Специальность
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.SpecialityRecord.Speciality">
+            <summary>
+            Название специальности
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Records.SpecialityRecord.#ctor(System.Guid,System.String)">
+            <summary>
+            ctor
+            </summary>
+            <param name="id">идентификатор записи</param>
+            <param name="speciality">название специальности</param>
+            <exception cref="T:System.ArgumentNullException">если специальность была пуста</exception>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Addiction">
+            <summary>
+            Зависимость
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Addiction.AddictionKind">
+            <summary>
+            Тип зависимости
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Addiction.#ctor(System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="addictionKind">Тип зависимости</param>
+            <exception cref="T:System.ArgumentNullException">если переданный тип был null</exception>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.ChildhoodViolence">
+            <summary>
+            Насилие в детстве
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.HealthStatus">
+            <summary>
+            Уязвимость по состоянию здоровья
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.HealthStatus.HealthStatusVulnerabilityType">
+            <summary>
+            Тип уязвимости по состоянию здоровья
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.HealthStatus.HealthStatusVulnerabilityType.None">
+            <summary>
+            нет
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.HealthStatus.HealthStatusVulnerabilityType.Disability">
+            <summary>
+            Инвалидность
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.HealthStatus.HealthStatusVulnerabilityType.SpecialNeeds">
+            <summary>
+            ОВЗ - ограниченные возможности здоровья
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.HealthStatus.HealthStatusVulnerabilityType.MentalDisorder">
+            <summary>
+            Психическое расстройство
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.HealthStatus.HealthStatusVulnerabilityType.Tuberculosis">
+            <summary>
+            Туберкулёз
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.HealthStatus.HealthStatusVulnerabilityType.HIV">
+            <summary>
+            ВИЧ
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.HealthStatus.HealthStatusVulnerabilityType.HepatitisB">
+            <summary>
+            Гепатит B
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.HealthStatus.HealthStatusVulnerabilityType.HepatitisC">
+            <summary>
+            Гепатит C
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.HealthStatus.HealthStatusVulnerabilityType.Other">
+            <summary>
+            Другое
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.HealthStatus.Kind">
+            <summary>
+            Тип уязвимости по здоровью
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.HealthStatus.OtherDetailed">
+            <summary>
+            Уточнение в случае, если другое
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.HealthStatus.#ctor(SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.HealthStatus.HealthStatusVulnerabilityType,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="kind">Типы уязвимости по состоянию здоровья</param>
+            <param name="otherDetailed">Уточнение для иного</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Homelessness">
+            <summary>
+            Бездомность
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Migration">
+            <summary>
+            Мигрант_ка
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.OrphanageExperience">
+            <summary>
+            Опыт интернатного учреждения
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Other">
+            <summary>
+            Другое
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Other.Details">
+            <summary>
+            Уточнение что другое
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Other.#ctor(System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="details">Уточнение</param>
+            <exception cref="T:System.ArgumentNullException">в случае, если текст уточнения был null</exception>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Vulnerability">
+            <summary>
+            Фактор уязвимости
+            </summary>
+        </member>
         <member name="T:SafeHouseAMS.BizLayer.Survivors.Commands.CreateSurvivor">
             <summary>
             Команда создания нового пострадавшего

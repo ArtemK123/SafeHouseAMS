@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SafeHouseAMS.DataLayer</name>
+    </assembly>
+    <members>
+        <member name="M:SafeHouseAMS.DataLayer.DataContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SafeHouseAMS.DataLayer.DataContext.MigrateAsync">
+            <inheritdoc />
+        </member>
+        <member name="T:SafeHouseAMS.DataLayer.DataLayerInjector">
+            <summary>
+            Методы внедрения логики доступа к данным
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.DataLayer.DataLayerInjector.ConnectToDatabase(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Добавить сервисы слоя доступа к данным
+            </summary>
+            <param name="services">Коллекция сервисов, в которую внедряются службы слоя доступа к данным</param>
+            <param name="configuration">Конфигурация</param>
+            <returns>Та же коллекция, для чейнинга</returns>
+        </member>
+        <member name="T:SafeHouseAMS.DataLayer.IDatabaseMigrator">
+            <summary>
+            Интерфейс службы выполнения миграций
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.DataLayer.IDatabaseMigrator.MigrateAsync">
+            <summary>
+            Выполнить все ожидающие миграции
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.SurvivorDAL.Num">
+            <summary>
+            Номер карточки п/п
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.SurvivorDAL.Name">
+            <summary>
+            Имя пострадавшего
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.SurvivorDAL.Sex">
+            <summary>
+            Пол
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.SurvivorDAL.OtherSex">
+            <summary>
+            Уточнение другого пола
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.SurvivorDAL.BirthDateAccurate">
+            <summary>
+            Точная дата рождения - если известна
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.SurvivorDAL.BirthDateCalculated">
+            <summary>
+            Вычисленная (приблизительная) дата рождения. Если неизвестна точная
+            </summary>
+        </member>
+    </members>
+</doc>

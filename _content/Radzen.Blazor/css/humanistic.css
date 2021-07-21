@@ -5034,6 +5034,44 @@ p-button[type] {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
 
+.rz-badge {
+  color: #ffffff;
+  display: inline-block;
+  padding: .25em .4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap; }
+
+.rz-badge-primary {
+  background-color: #d64d42; }
+
+.rz-badge-light {
+  background-color: #e6ecef;
+  color: #3a474d; }
+
+.rz-badge-secondary {
+  background-color: #3ba5fc; }
+
+.rz-badge-info {
+  background-color: #68d5c8; }
+
+.rz-badge-warning {
+  background-color: #e6c54f; }
+
+.rz-badge-error {
+  background-color: #f9777f; }
+
+.rz-badge-danger {
+  background-color: #f9777f; }
+
+.rz-badge-success {
+  background-color: #5dbf74; }
+
+.rz-badge-pill {
+  border-radius: 10rem; }
+
 .rz-autocomplete:hover, .rz-radiobutton-box:hover:not(.rz-state-disabled), .rz-chkbox-box:hover:not(.rz-state-disabled), .rz-colorpicker:hover:not(:focus), .rz-lookup-search input:hover:not(:focus), .rz-spinner:hover:not(:focus), .rz-calendar .rz-inputtext:hover:not(:focus), .rz-multiselect:hover:not(:focus), .rz-dropdown:hover:not(:focus), .mask:hover:not(:focus), .rz-textarea:hover:not(:focus), .rz-textbox:hover:not(:focus) {
   -webkit-box-shadow: inset 0 4px 7px 0 rgba(0, 0, 0, 0.03);
           box-shadow: inset 0 4px 7px 0 rgba(0, 0, 0, 0.03);

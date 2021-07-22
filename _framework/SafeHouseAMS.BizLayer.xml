@@ -42,7 +42,7 @@
         <member name="P:SafeHouseAMS.BizLayer.BaseDomainModel.LastEdit">
             <inheritdoc />
         </member>
-        <member name="M:SafeHouseAMS.BizLayer.BaseDomainModel.#ctor(System.Guid,System.Boolean,System.DateTimeOffset,System.DateTimeOffset)">
+        <member name="M:SafeHouseAMS.BizLayer.BaseDomainModel.#ctor(System.Guid,System.Boolean,System.DateTime,System.DateTime)">
             <summary>
             Ctor 
             </summary>
@@ -152,7 +152,7 @@
             гражданство
             </summary>
         </member>
-        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateInquiry.#ctor(System.Guid,System.DateTimeOffset,System.Guid,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.InquirySources.IInquirySource},System.String)">
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateInquiry.#ctor(System.Guid,System.DateTime,System.Guid,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.InquirySources.IInquirySource},System.String)">
             <summary>
             ctor
             </summary>
@@ -209,7 +209,7 @@
             <param name="cancellationToken">токен отмены</param>
             <returns>асинхронная последовательность документов</returns>
         </member>
-        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.CreateInquiry(System.Guid,System.Boolean,System.DateTimeOffset,System.DateTimeOffset,System.Guid,System.DateTimeOffset,System.Boolean,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.InquirySources.IInquirySource})">
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.CreateInquiry(System.Guid,System.Boolean,System.DateTime,System.DateTime,System.Guid,System.DateTime,System.Boolean,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.InquirySources.IInquirySource})">
             <summary>
             СОздать документ обращения
             </summary>
@@ -244,7 +244,7 @@
             Источники обращения
             </summary>
         </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.Сitizenship">
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.Citizenship">
             <summary>
             Гражданство в момент обращения
             </summary>
@@ -279,7 +279,7 @@
             Иные факторы уязвимости
             </summary>
         </member>
-        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.#ctor(System.Guid,System.Boolean,System.DateTimeOffset,System.DateTimeOffset,System.DateTimeOffset,SafeHouseAMS.BizLayer.Survivors.Survivor,System.Boolean,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.InquirySources.IInquirySource},SafeHouseAMS.BizLayer.LifeSituations.Records.CitizenshipRecord,SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord,SafeHouseAMS.BizLayer.LifeSituations.Records.ChildrenRecord,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord},System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Records.SpecialityRecord},System.String,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Vulnerability})">
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.#ctor(System.Guid,System.Boolean,System.DateTime,System.DateTime,System.DateTime,SafeHouseAMS.BizLayer.Survivors.Survivor,System.Boolean,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.InquirySources.IInquirySource},SafeHouseAMS.BizLayer.LifeSituations.Records.CitizenshipRecord,SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord,SafeHouseAMS.BizLayer.LifeSituations.Records.ChildrenRecord,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord},System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Records.SpecialityRecord},System.String,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Vulnerability})">
             <summary>
             ctor
             </summary>
@@ -440,7 +440,7 @@
             Пострадавший к которому относится эта запись
             </summary>
         </member>
-        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.LifeSituationDocument.#ctor(System.Guid,System.Boolean,System.DateTimeOffset,System.DateTimeOffset,System.DateTimeOffset,SafeHouseAMS.BizLayer.Survivors.Survivor)">
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.LifeSituationDocument.#ctor(System.Guid,System.Boolean,System.DateTime,System.DateTime,System.DateTime,SafeHouseAMS.BizLayer.Survivors.Survivor)">
             <summary>
             Конструктор
             </summary>
@@ -849,7 +849,7 @@
             Команда создания нового пострадавшего
             </summary>
         </member>
-        <member name="M:SafeHouseAMS.BizLayer.Survivors.Commands.CreateSurvivor.#ctor(System.Guid,System.String,SafeHouseAMS.BizLayer.Survivors.SexEnum,System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
+        <member name="M:SafeHouseAMS.BizLayer.Survivors.Commands.CreateSurvivor.#ctor(System.Guid,System.String,SafeHouseAMS.BizLayer.Survivors.SexEnum,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
             <summary>
             ctor
             </summary>
@@ -899,7 +899,7 @@
             Репозиторий карточек пострадавших
             </summary>
         </member>
-        <member name="M:SafeHouseAMS.BizLayer.Survivors.ISurvivorRepository.Create(System.Guid,System.Boolean,System.DateTimeOffset,System.DateTimeOffset,System.String,SafeHouseAMS.BizLayer.Survivors.SexEnum,System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
+        <member name="M:SafeHouseAMS.BizLayer.Survivors.ISurvivorRepository.Create(System.Guid,System.Boolean,System.DateTime,System.DateTime,System.String,SafeHouseAMS.BizLayer.Survivors.SexEnum,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
             <summary>
             Создать новую запись
             </summary>
@@ -1000,7 +1000,7 @@
             Возраст
             </summary>
         </member>
-        <member name="M:SafeHouseAMS.BizLayer.Survivors.Survivor.#ctor(System.Guid,System.Boolean,System.DateTimeOffset,System.DateTimeOffset,System.String,System.Int32,SafeHouseAMS.BizLayer.Survivors.SexEnum,System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
+        <member name="M:SafeHouseAMS.BizLayer.Survivors.Survivor.#ctor(System.Guid,System.Boolean,System.DateTime,System.DateTime,System.String,System.Int32,SafeHouseAMS.BizLayer.Survivors.SexEnum,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
             <summary>
             Ctor
             </summary>

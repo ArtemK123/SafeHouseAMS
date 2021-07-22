@@ -33,32 +33,147 @@
             Выполнить все ожидающие миграции
             </summary>
         </member>
-        <member name="P:SafeHouseAMS.DataLayer.Models.SurvivorDAL.Num">
+        <member name="T:SafeHouseAMS.DataLayer.Models.LifeSituations.BaseRecordDAL">
+            <summary>
+            Класс-заголовок 
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.BaseRecordDAL.ID">
+            <summary>
+            идентификатор записи
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.BaseRecordDAL.DocumentID">
+            <summary>
+            Идентификатор документа породившего запись
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.BaseRecordDAL.Content">
+            <summary>
+            Сериализованное в JSON содержимое записи
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.IsSelfInquiry">
+            <summary>
+            Самообращение?
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.SelfInquirySourcesMask">
+            <summary>
+            Битовая маска каналов самообращения
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.IsForwardedBySurvivor">
+            <summary>
+            Направлен другим пострадавшим
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.ForwardedBySurvivor">
+            <summary>
+            Уточнение - каким 
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.IsForwardedByPerson">
+            <summary>
+            Направлен другим лицом
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.ForwardedByPerson">
+            <summary>
+            кто направил
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.IsForwardedByOrganization">
+            <summary>
+            направлен другой организацией
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.ForwardedByOrgannization">
+            <summary>
+            какой другой организацией
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.WorkingExperience">
+            <summary>
+            Опыт работы
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.HasAddiction">
+            <summary>
+            Зависимость
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.AddictionKind">
+            <summary>
+            Тип зависимости
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.ChildhoodViolence">
+            <summary>
+            насилие в детстве
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.Homelessness">
+            <summary>
+            бездомность
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.Mirgation">
+            <summary>
+            мигрант_ка
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.OrphanageExperience">
+            <summary>
+            опыт интернатного учреждения
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.HasOtherVulnerability">
+            <summary>
+            другие факторы уязвимости
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.OtherVulnerabilityDetails">
+            <summary>
+            уточнение других факторов уязвимости
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.HealthStatusVulnerabilityMask">
+            <summary>
+            битовая маска факторов уязвимости по здоровью
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.OtherHealthStatusVulnerabilityDetail">
+            <summary>
+            другие факторы уязвимости по здоровью - уточнение
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.DataLayer.Models.Survivors.SurvivorDAL.Num">
             <summary>
             Номер карточки п/п
             </summary>
         </member>
-        <member name="P:SafeHouseAMS.DataLayer.Models.SurvivorDAL.Name">
+        <member name="P:SafeHouseAMS.DataLayer.Models.Survivors.SurvivorDAL.Name">
             <summary>
             Имя пострадавшего
             </summary>
         </member>
-        <member name="P:SafeHouseAMS.DataLayer.Models.SurvivorDAL.Sex">
+        <member name="P:SafeHouseAMS.DataLayer.Models.Survivors.SurvivorDAL.Sex">
             <summary>
             Пол
             </summary>
         </member>
-        <member name="P:SafeHouseAMS.DataLayer.Models.SurvivorDAL.OtherSex">
+        <member name="P:SafeHouseAMS.DataLayer.Models.Survivors.SurvivorDAL.OtherSex">
             <summary>
             Уточнение другого пола
             </summary>
         </member>
-        <member name="P:SafeHouseAMS.DataLayer.Models.SurvivorDAL.BirthDateAccurate">
+        <member name="P:SafeHouseAMS.DataLayer.Models.Survivors.SurvivorDAL.BirthDateAccurate">
             <summary>
             Точная дата рождения - если известна
             </summary>
         </member>
-        <member name="P:SafeHouseAMS.DataLayer.Models.SurvivorDAL.BirthDateCalculated">
+        <member name="P:SafeHouseAMS.DataLayer.Models.Survivors.SurvivorDAL.BirthDateCalculated">
             <summary>
             Вычисленная (приблизительная) дата рождения. Если неизвестна точная
             </summary>

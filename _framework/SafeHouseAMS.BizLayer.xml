@@ -268,6 +268,13 @@
             <param name="cancellationToken">токен отмены операции</param>
             <returns>Асинхронный поток документов, относящихся к пострадавшему</returns>
         </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsAggregate.GetCitizenshipsCompletions(System.Threading.CancellationToken)">
+            <summary>
+            Получить список гражданств введённых для автозаполнения
+            </summary>
+            <param name="cancellationToken">токен отмены операции</param>
+            <returns>Асинхронная последовательность строк - что вводили в поле "гражданство"</returns>
+        </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository">
             <summary>
             Репозиторий документов жизненных ситуаций
@@ -308,6 +315,13 @@
             </summary>
             <param name="documentId">Идентификатор документа, создавшего запись</param>
             <param name="record">Собственно объект записи</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.GetCitizenshipsCompletions(System.Threading.CancellationToken)">
+            <summary>
+            Получить список гражданств введённых для автозаполнения
+            </summary>
+            <param name="cancellationToken">токен отмены операции</param>
+            <returns>Асинхронная последовательность строк - что вводили в поле "гражданство"</returns>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Inquiry">
             <summary>

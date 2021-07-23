@@ -175,6 +175,86 @@
             </summary>
             <param name="entityID">идентификатор документа на котором выполняется команда</param>
         </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetDomicile">
+            <summary>
+            Команда установки места жительства
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetDomicile.Place">
+            <summary>
+            Место жительства
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetDomicile.Kind">
+            <summary>
+            Тип места жительства
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetDomicile.LivesAlone">
+            <summary>
+            Живет од_на
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetDomicile.WithPartner">
+            <summary>
+            С супругом/партнером
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetDomicile.WithChildren">
+            <summary>
+            С детьми
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetDomicile.ChildrenDetails">
+            <summary>
+            Подробнее о детях
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetDomicile.WithParents">
+            <summary>
+            с родителями
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetDomicile.ParentsDetails">
+            <summary>
+            подробнее о родителях
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetDomicile.WithOtherRelatives">
+            <summary>
+            с другими родственниками
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetDomicile.OtherRelativesDetails">
+            <summary>
+            подробнее о других родственниках
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetDomicile.WithOtherPeople">
+            <summary>
+            с какими то другими людьми
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetDomicile.OtherPeopleDetails">
+            <summary>
+            подробнее о других людях
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetDomicile.#ctor(System.Guid,System.String,System.Nullable{SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.PlaceKind},System.Boolean,System.Boolean,System.String,System.String,System.String,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="entityID">идентификатор документа в рамках которого создана запись</param>
+            <param name="place">место жительства</param>
+            <param name="kind">тип места проживания</param>
+            <param name="livesAlone">живет од_на</param>
+            <param name="withPartner">с партнером</param>
+            <param name="childrenDetails">если заполнено - то с детьми</param>
+            <param name="parentsDetails">если заполнено - то с родитеялми</param>
+            <param name="otherRelativesDetails">если заполнено - то с другими родственниками</param>
+            <param name="otherPeopleDetails">если заполнено - то с другими людьми</param>
+            <exception cref="T:System.ArgumentNullException">если место жительства было null</exception>
+        </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsAggregate">
             <summary>
             Агрегат документов жизненных ситуаций 

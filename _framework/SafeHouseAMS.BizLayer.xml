@@ -122,6 +122,47 @@
             Timestamp последнего изменения модели
             </summary>
         </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddEducationLevel">
+            <summary>
+            Команда добавления уровня образования
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddEducationLevel.Level">
+            <summary>
+            Уровень образования
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddEducationLevel.Details">
+            <summary>
+            Подробное описание
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddEducationLevel.#ctor(System.Guid,SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord.EduLevel,System.String)">
+            <summary>
+            ctor
+            </summary>
+            <param name="entityID">идентификатор документа</param>
+            <param name="level">Уровень образования</param>
+            <param name="details">Дополнительные детали</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddSpeciality">
+            <summary>
+            Команда добавления записи о специальности
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddSpeciality.Speciality">
+            <summary>
+            Собственно специальность
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddSpeciality.#ctor(System.Guid,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="entityID">идентификатор документ</param>
+            <param name="speciality">наименование специальности</param>
+            <exception cref="T:System.ArgumentNullException">если специальность была null</exception>
+        </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateInquiry">
             <summary>
             Создать новы документ обращения

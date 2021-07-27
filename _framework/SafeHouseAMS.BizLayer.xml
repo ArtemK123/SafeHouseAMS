@@ -319,6 +319,24 @@
             <param name="otherPeopleDetails">если заполнено - то с другими людьми</param>
             <exception cref="T:System.ArgumentNullException">если место жительства было null</exception>
         </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetWorkingExperience">
+            <summary>
+            Команда установки атрибута "опыт работы"
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetWorkingExperience.Details">
+            <summary>
+            Собственно информация об опыте работы
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetWorkingExperience.#ctor(System.Guid,System.String)">
+            <summary>
+            ctor
+            </summary>
+            <param name="entityID">Идентификатор документа</param>
+            <param name="details">Опыт работы</param>
+            <exception cref="T:System.ArgumentNullException">если опыт был null</exception>
+        </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsAggregate">
             <summary>
             Агрегат документов жизненных ситуаций 
@@ -386,6 +404,13 @@
             </summary>
             <param name="cancellationToken">токен отмены операции</param>
             <returns>Асинхронная последовательность строк - что вводили в поле "гражданство"</returns>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.SetWorkingExperience(System.Guid,System.String)">
+            <summary>
+            Заполнить "опыт работы"
+            </summary>
+            <param name="documentId">идентификатор документа</param>
+            <param name="workingExperience">строка-описание опыта работы</param>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Inquiry">
             <summary>

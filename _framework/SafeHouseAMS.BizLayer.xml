@@ -319,6 +319,24 @@
             <param name="otherPeopleDetails">если заполнено - то с другими людьми</param>
             <exception cref="T:System.ArgumentNullException">если место жительства было null</exception>
         </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetVulnerabilities">
+            <summary>
+            Команда установки факторов уязвимости
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetVulnerabilities.Vulnerabilities">
+            <summary>
+            Коллекция факторов уязвимости
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetVulnerabilities.#ctor(System.Guid,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Vulnerability})">
+            <summary>
+            ctor
+            </summary>
+            <param name="entityID">идентификатор документа обращения, для которого регистрируются уязвимости</param>
+            <param name="vulnerabilities">коллекция факторов уязвимости</param>
+            <exception cref="T:System.ArgumentNullException">если вместо коллекции был null</exception>
+        </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetWorkingExperience">
             <summary>
             Команда установки атрибута "опыт работы"
@@ -409,8 +427,97 @@
             <summary>
             Заполнить "опыт работы"
             </summary>
-            <param name="documentId">идентификатор документа</param>
+            <param name="inquiryId">идентификатор документа</param>
             <param name="workingExperience">строка-описание опыта работы</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.SetAddiction(System.Guid,System.String)">
+            <summary>
+            Установить зависимость
+            </summary>
+            <param name="inquiryId">идентификатор обращения</param>
+            <param name="addictionKind">тип зависимости</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.ClearAddiction(System.Guid)">
+            <summary>
+            Убрать зависимость
+            </summary>
+            <param name="inquiryId">идентификтаор обращения</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.SetHomeless(System.Guid)">
+            <summary>
+            Установить признак бездомность
+            </summary>
+            <param name="inquiryId">идентификатор обращения</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.ClearHomeless(System.Guid)">
+            <summary>
+            Снять признак бездомности 
+            </summary>
+            <param name="inquiryId">идентификатор обращения</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.SetMigration(System.Guid)">
+            <summary>
+            Установить признак мигрант_ка
+            </summary>
+            <param name="inquiryId">идентификатор обращения</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.ClearMigration(System.Guid)">
+            <summary>
+            Снять признак мигрант_ка
+            </summary>
+            <param name="inquiryId">идентификатор обращения</param>
+            <returns></returns>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.SetChildhoodViolence(System.Guid)">
+            <summary>
+            Установить признак "насилие в детстве"
+            </summary>
+            <param name="inquiryId">идентификатор обращения</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.ClearChildhoodViolence(System.Guid)">
+            <summary>
+            Снять признак "насилие в детстве"
+            </summary>
+            <param name="inquiryId">идентификатор обращения</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.SetOrphanageExperience(System.Guid)">
+            <summary>
+            Установить признак "опыт интернатного учреждения
+            </summary>
+            <param name="inquiryId">идентификатор обращения</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.ClearOrphanageExperience(System.Guid)">
+            <summary>
+            Снять признак "опыт интернатного учреждения"
+            </summary>
+            <param name="inquiryId">идентификатор обращения</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.SetOther(System.Guid,System.String)">
+            <summary>
+            Установить признак "другие факторы уязвимости"
+            </summary>
+            <param name="inquiryId">идентификатор обращения</param>
+            <param name="details">описание других факторов</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.ClearOther(System.Guid)">
+            <summary>
+            Снять признак "другие факторы уязвимости"
+            </summary>
+            <param name="inquiryId">идентификатор обращения</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.SetHealthStatusVulnerability(System.Guid,SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.HealthStatus.HealthStatusVulnerabilityType,System.String)">
+            <summary>
+            Установить признак "уявзимости связанные со здоровьем"
+            </summary>
+            <param name="inquiryId">идентификатор обращения</param>
+            <param name="healthStatus">битовая маска факторов здоровья</param>
+            <param name="details">уточнение</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.ClearHealthStatusVulnerability(System.Guid)">
+            <summary>
+            Снять признак "уязвимости связанные со здоровьем"
+            </summary>
+            <param name="inquiryId">идентификатор обращения</param>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Inquiry">
             <summary>
@@ -913,10 +1020,16 @@
             <param name="addictionKind">Тип зависимости</param>
             <exception cref="T:System.ArgumentNullException">если переданный тип был null</exception>
         </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Addiction.ToString">
+            <inheritdoc />
+        </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.ChildhoodViolence">
             <summary>
             Насилие в детстве
             </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.ChildhoodViolence.ToString">
+            <inheritdoc />
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.HealthStatus">
             <summary>
@@ -990,20 +1103,32 @@
             <param name="kind">Типы уязвимости по состоянию здоровья</param>
             <param name="otherDetailed">Уточнение для иного</param>
         </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.HealthStatus.ToString">
+            <inheritdoc />
+        </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Homelessness">
             <summary>
             Бездомность
             </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Homelessness.ToString">
+            <inheritdoc />
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Migration">
             <summary>
             Мигрант_ка
             </summary>
         </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Migration.ToString">
+            <inheritdoc />
+        </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.OrphanageExperience">
             <summary>
             Опыт интернатного учреждения
             </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.OrphanageExperience.ToString">
+            <inheritdoc />
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Other">
             <summary>
@@ -1021,6 +1146,9 @@
             </summary>
             <param name="details">Уточнение</param>
             <exception cref="T:System.ArgumentNullException">в случае, если текст уточнения был null</exception>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Other.ToString">
+            <inheritdoc />
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Vulnerability">
             <summary>

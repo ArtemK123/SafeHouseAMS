@@ -118,7 +118,7 @@
             бездомность
             </summary>
         </member>
-        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.Mirgation">
+        <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.Migration">
             <summary>
             мигрант_ка
             </summary>

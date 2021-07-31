@@ -9343,3 +9343,120 @@ body:not(.rz-default-scrollbars) ::-webkit-scrollbar-corner {
   cursor: pointer;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.25) 0px 0px 4px inset;
           box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.25) 0px 0px 4px inset; }
+
+.rz-splitter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+  height: 100%; }
+  .rz-splitter > .rz-splitter-bar {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    position: relative;
+    text-align: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #6A6A6A;
+    background-color: #E6ECEF;
+    opacity: 0.4;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+    .rz-splitter > .rz-splitter-bar > .rz-collapse {
+      height: 32px;
+      padding-top: 50%; }
+      .rz-splitter > .rz-splitter-bar > .rz-collapse:before {
+        font-family: 'Material Icons'; }
+      .rz-splitter > .rz-splitter-bar > .rz-collapse:hover {
+        cursor: pointer; }
+    .rz-splitter > .rz-splitter-bar > .rz-resize {
+      border: 1px solid #6A6A6A;
+      border-radius: 1px; }
+    .rz-splitter > .rz-splitter-bar > .rz-expand {
+      height: 32px;
+      padding-top: 50%; }
+      .rz-splitter > .rz-splitter-bar > .rz-expand:before {
+        font-family: 'Material Icons'; }
+      .rz-splitter > .rz-splitter-bar > .rz-expand:hover {
+        cursor: pointer; }
+    .rz-splitter > .rz-splitter-bar-resizable:hover {
+      background-color: #E6ECEF;
+      opacity: 1; }
+    .rz-splitter > .rz-splitter-bar-resizable:active {
+      background-color: #479CC8;
+      opacity: 1; }
+      .rz-splitter > .rz-splitter-bar-resizable:active > .rz-expand, .rz-splitter > .rz-splitter-bar-resizable:active > .rz-resize, .rz-splitter > .rz-splitter-bar-resizable:active > .rz-collapse {
+        color: #fff; }
+      .rz-splitter > .rz-splitter-bar-resizable:active > .rz-resize {
+        border: 1px solid #fff; }
+    .rz-splitter > .rz-splitter-bar-resizable:disabled {
+      opacity: 0.2; }
+  .rz-splitter-horizontal {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .rz-splitter-horizontal > .rz-splitter-bar {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 8px; }
+      .rz-splitter-horizontal > .rz-splitter-bar > .rz-collapse:before {
+        content: 'arrow_left'; }
+      .rz-splitter-horizontal > .rz-splitter-bar > .rz-resize {
+        height: 16px;
+        margin: 2px 0; }
+      .rz-splitter-horizontal > .rz-splitter-bar > .rz-expand:before {
+        content: 'arrow_right';
+        width: 8px; }
+      .rz-splitter-horizontal > .rz-splitter-bar-resizable:hover {
+        cursor: col-resize; }
+  .rz-splitter-vertical {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .rz-splitter-vertical > .rz-splitter-bar {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      height: 8px; }
+      .rz-splitter-vertical > .rz-splitter-bar > .rz-collapse:before {
+        content: 'arrow_up'; }
+      .rz-splitter-vertical > .rz-splitter-bar > .rz-resize {
+        width: 16px;
+        margin: 0 2px; }
+      .rz-splitter-vertical > .rz-splitter-bar > .rz-expand:before {
+        content: 'arrow_down'; }
+      .rz-splitter-vertical > .rz-splitter-bar-resizable:hover {
+        cursor: row-resize; }
+  .rz-splitter-pane {
+    overflow: hidden;
+    position: relative;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto; }
+    .rz-splitter-pane-collapsed {
+      -webkit-box-flex: 0 !important;
+          -ms-flex: 0 1 0% !important;
+              flex: 0 1 0% !important;
+      overflow: hidden !important;
+      display: block !important; }
+    .rz-splitter-pane-lastresizable {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto; }

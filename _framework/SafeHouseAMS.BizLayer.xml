@@ -581,7 +581,7 @@
             <param name="survivor">пострадавший</param>
             <param name="isJuvenile">несовершеннолетний на момент обращения</param>
             <param name="inquirySources">источники обращения</param>
-            <param name="сitizenship">гразданство</param>
+            <param name="citizenship">гразданство</param>
             <param name="domicile">место жительства, если известно</param>
             <param name="hasChildren">статус по детям</param>
             <param name="educationLevel">статус образования</param>
@@ -1160,6 +1160,31 @@
             Команда создания нового пострадавшего
             </summary>
         </member>
+        <member name="P:SafeHouseAMS.BizLayer.Survivors.Commands.CreateSurvivor.Name">
+            <summary>
+            Имя создаваемого пострадавшего
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.Survivors.Commands.CreateSurvivor.Sex">
+            <summary>
+            Пол
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.Survivors.Commands.CreateSurvivor.OtherSex">
+            <summary>
+            Уточнение пола
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.Survivors.Commands.CreateSurvivor.BirthDateAccurate">
+            <summary>
+            Точная дата рождения
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.Survivors.Commands.CreateSurvivor.BirthDateCalculated">
+            <summary>
+            Вычисленная дата рождения
+            </summary>
+        </member>
         <member name="M:SafeHouseAMS.BizLayer.Survivors.Commands.CreateSurvivor.#ctor(System.Guid,System.String,SafeHouseAMS.BizLayer.Survivors.SexEnum,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
             <summary>
             ctor
@@ -1191,12 +1216,13 @@
             Интерфейс агрегата бизнес-логики реестра пострадавих 
             </summary>
         </member>
-        <member name="M:SafeHouseAMS.BizLayer.Survivors.ISurvivorCatalogue.GetCollection(System.Int32,System.Nullable{System.Int32})">
+        <member name="M:SafeHouseAMS.BizLayer.Survivors.ISurvivorCatalogue.GetCollection(System.Int32,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Получить список пострадавших
             </summary>
             <param name="skip">Пропустить первых записей</param>
             <param name="take">Ограничить размер выдачи. Если null - то не ограничивать</param>
+            <param name="cancellationToken">токен отмены операции</param>
             <returns></returns>
         </member>
         <member name="M:SafeHouseAMS.BizLayer.Survivors.ISurvivorCatalogue.GetTotalCount">
@@ -1232,12 +1258,13 @@
             <param name="cancellationToken">Токен отмены</param>
             <returns>Найденая запись</returns>
         </member>
-        <member name="M:SafeHouseAMS.BizLayer.Survivors.ISurvivorRepository.GetCollection(System.Int32,System.Nullable{System.Int32})">
+        <member name="M:SafeHouseAMS.BizLayer.Survivors.ISurvivorRepository.GetCollection(System.Int32,System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Получить коллекцию записей пострадавших
             </summary>
             <param name="skip">Пропустить первые записи</param>
             <param name="take">Ограничить количество. Если null - не ограничивать</param>
+            <param name="cancellationToken">токен отмены операции</param>
             <returns>Асинхронная последовательность записей пострадавших</returns>
         </member>
         <member name="M:SafeHouseAMS.BizLayer.Survivors.ISurvivorRepository.GetTotalCount">

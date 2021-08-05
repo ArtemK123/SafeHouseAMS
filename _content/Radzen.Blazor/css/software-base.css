@@ -4734,20 +4734,22 @@ body:not(.rz-default-scrollbars) ::-webkit-scrollbar-corner {
         -ms-user-select: none;
             user-select: none; }
     .rz-splitter > .rz-splitter-bar > .rz-collapse {
-      height: 32px;
-      padding-top: 50%; }
+      display: table; }
       .rz-splitter > .rz-splitter-bar > .rz-collapse:before {
-        font-family: 'Material Icons'; }
+        font-family: 'Material Icons';
+        line-height: normal;
+        display: table-cell; }
       .rz-splitter > .rz-splitter-bar > .rz-collapse:hover {
         cursor: pointer; }
     .rz-splitter > .rz-splitter-bar > .rz-resize {
       border: 1px solid #6A6A6A;
       border-radius: 1px; }
     .rz-splitter > .rz-splitter-bar > .rz-expand {
-      height: 32px;
-      padding-top: 50%; }
+      display: table; }
       .rz-splitter > .rz-splitter-bar > .rz-expand:before {
-        font-family: 'Material Icons'; }
+        font-family: 'Material Icons';
+        line-height: normal;
+        display: table-cell; }
       .rz-splitter > .rz-splitter-bar > .rz-expand:hover {
         cursor: pointer; }
     .rz-splitter > .rz-splitter-bar-resizable:hover {
@@ -4779,8 +4781,7 @@ body:not(.rz-default-scrollbars) ::-webkit-scrollbar-corner {
         height: 16px;
         margin: 2px 0; }
       .rz-splitter-horizontal > .rz-splitter-bar > .rz-expand:before {
-        content: 'arrow_right';
-        width: 8px; }
+        content: 'arrow_right'; }
       .rz-splitter-horizontal > .rz-splitter-bar-resizable:hover {
         cursor: col-resize; }
   .rz-splitter-vertical {
@@ -4795,12 +4796,12 @@ body:not(.rz-default-scrollbars) ::-webkit-scrollbar-corner {
               flex-direction: row;
       height: 8px; }
       .rz-splitter-vertical > .rz-splitter-bar > .rz-collapse:before {
-        content: 'arrow_up'; }
+        content: 'arrow_drop_up'; }
       .rz-splitter-vertical > .rz-splitter-bar > .rz-resize {
         width: 16px;
         margin: 0 2px; }
       .rz-splitter-vertical > .rz-splitter-bar > .rz-expand:before {
-        content: 'arrow_down'; }
+        content: 'arrow_drop_down'; }
       .rz-splitter-vertical > .rz-splitter-bar-resizable:hover {
         cursor: row-resize; }
   .rz-splitter-pane {

@@ -145,6 +145,42 @@
             <param name="level">Уровень образования</param>
             <param name="details">Дополнительные детали</param>
         </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddMigrationStatus">
+            <summary>
+            Команда добавления записи о миграционном стсатусе
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddMigrationStatus.Details">
+            <summary>
+            Собственно миграционный статус
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddMigrationStatus.#ctor(System.Guid,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="entityID">идентификатор документ</param>
+            <param name="details">миграционный статус</param>
+            <exception cref="T:System.ArgumentNullException">если специальность была null</exception>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddRegistrationStatus">
+            <summary>
+            Команда добавления записи о статусе регистрации
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddRegistrationStatus.Details">
+            <summary>
+            Собственно статус регистрации
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddRegistrationStatus.#ctor(System.Guid,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="entityID">идентификатор документ</param>
+            <param name="details">статус регистрации</param>
+            <exception cref="T:System.ArgumentNullException">если специальность была null</exception>
+        </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddSpeciality">
             <summary>
             Команда добавления записи о специальности
@@ -569,7 +605,17 @@
             Иные факторы уязвимости
             </summary>
         </member>
-        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.#ctor(System.Guid,System.Boolean,System.DateTime,System.DateTime,System.DateTime,SafeHouseAMS.BizLayer.Survivors.Survivor,System.Boolean,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.InquirySources.IInquirySource},SafeHouseAMS.BizLayer.LifeSituations.Records.CitizenshipRecord,SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord,SafeHouseAMS.BizLayer.LifeSituations.Records.ChildrenRecord,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord},System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Records.SpecialityRecord},System.String,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Vulnerability})">
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.MigrationStatus">
+            <summary>
+            Запись о миграционном статусе
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.RegistrationStatus">
+            <summary>
+            Запись о статусе регистрации
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.#ctor(System.Guid,System.Boolean,System.DateTime,System.DateTime,System.DateTime,SafeHouseAMS.BizLayer.Survivors.Survivor,System.Boolean,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.InquirySources.IInquirySource},SafeHouseAMS.BizLayer.LifeSituations.Records.CitizenshipRecord,SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord,SafeHouseAMS.BizLayer.LifeSituations.Records.ChildrenRecord,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord},System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Records.SpecialityRecord},System.String,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Vulnerability},SafeHouseAMS.BizLayer.LifeSituations.Records.MigrationStatusRecord,SafeHouseAMS.BizLayer.LifeSituations.Records.RegistrationStatusRecord)">
             <summary>
             ctor
             </summary>
@@ -588,6 +634,8 @@
             <param name="specialities">специальности</param>
             <param name="workingExperience">опыт работы</param>
             <param name="vulnerabilityFactors">факторы уязвимости</param>
+            <param name="migrationStatus">запись о миграционном статусе</param>
+            <param name="registrationStatus">запись о статусе регистрации</param>
             <exception cref="T:System.ArgumentNullException">если нет гражданства или источников обращения</exception>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.ForwardedByOrganization">
@@ -984,6 +1032,42 @@
             <param name="id">идентификатор записи</param>
             <param name="level">Уровень полученного образования</param>
             <param name="details">Подробности - количество классов или названия курсов</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Records.MigrationStatusRecord">
+            <summary>
+            Запись о миграционном статусе
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.MigrationStatusRecord.Details">
+            <summary>
+            собственно информация о миграционном статусе
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Records.MigrationStatusRecord.#ctor(System.Guid,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="id">идентификатор записи</param>
+            <param name="details">информация о миграционном статусе</param>
+            <exception cref="T:System.ArgumentNullException">если передали пустую строку</exception>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Records.RegistrationStatusRecord">
+            <summary>
+            Запись о статусе регистрации
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.RegistrationStatusRecord.Details">
+            <summary>
+            собственно информация о статусе регистрации
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Records.RegistrationStatusRecord.#ctor(System.Guid,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="id">идентификатор записи</param>
+            <param name="details">информация о статусе регистрации</param>
+            <exception cref="T:System.ArgumentNullException">если передали пустую строку</exception>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Records.SpecialityRecord">
             <summary>

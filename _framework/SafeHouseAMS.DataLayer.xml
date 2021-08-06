@@ -35,7 +35,7 @@
         </member>
         <member name="T:SafeHouseAMS.DataLayer.Models.LifeSituations.BaseRecordDAL">
             <summary>
-            Класс-заголовок 
+            Класс-заголовок
             </summary>
         </member>
         <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.BaseRecordDAL.ID">
@@ -70,7 +70,7 @@
         </member>
         <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.ForwardedBySurvivor">
             <summary>
-            Уточнение - каким 
+            Уточнение - каким
             </summary>
         </member>
         <member name="P:SafeHouseAMS.DataLayer.Models.LifeSituations.InquiryDAL.IsForwardedByPerson">

@@ -122,6 +122,29 @@
             Timestamp последнего изменения модели
             </summary>
         </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.CitizenshipChange">
+            <summary>
+            Документ о смене граждаснтва
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.CitizenshipChange.Citizenship">
+            <summary>
+            Новая запись о гражданстве
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.CitizenshipChange.#ctor(System.Guid,System.Boolean,System.DateTime,System.DateTime,System.DateTime,SafeHouseAMS.BizLayer.Survivors.Survivor,SafeHouseAMS.BizLayer.LifeSituations.Records.CitizenshipRecord)">
+            <summary>
+            ctor
+            </summary>
+            <param name="id">идентификатор документа</param>
+            <param name="isDeleted">признак удалённого документа</param>
+            <param name="created">дата создания</param>
+            <param name="lastEdit">дата последнего редактирования</param>
+            <param name="documentDate">дата документа</param>
+            <param name="survivor">пострадавший, к которому относится документ</param>
+            <param name="citizenship">собственно запись о гражданстве</param>
+            <exception cref="T:System.ArgumentNullException">если передали null, куда не следует</exception>
+        </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddEducationLevel">
             <summary>
             Команда добавления уровня образования
@@ -198,6 +221,36 @@
             <param name="entityID">идентификатор документ</param>
             <param name="speciality">наименование специальности</param>
             <exception cref="T:System.ArgumentNullException">если специальность была null</exception>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateCitizenshipChange">
+            <summary>
+            Команда создания документа о смене гражданства
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateCitizenshipChange.SurvivorID">
+            <summary>
+            Идентификатор пострадавшего
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateCitizenshipChange.DocumentDate">
+            <summary>
+            Дата документа
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateCitizenshipChange.Citizenship">
+            <summary>
+            Новое значение для гражданства
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateCitizenshipChange.#ctor(System.Guid,System.Guid,System.DateTime,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="entityID">идентификатор создаваемого документа</param>
+            <param name="documentDate">дата документа</param>
+            <param name="citizenship">Новое гражданство</param>
+            <param name="survivorID">Идентификатор пострадавшего</param>
+            <exception cref="T:System.ArgumentNullException">Если переданное гражданство было null</exception>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateInquiry">
             <summary>
@@ -487,7 +540,7 @@
         </member>
         <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.ClearHomeless(System.Guid)">
             <summary>
-            Снять признак бездомности 
+            Снять признак бездомности
             </summary>
             <param name="inquiryId">идентификатор обращения</param>
         </member>
@@ -554,6 +607,17 @@
             Снять признак "уязвимости связанные со здоровьем"
             </summary>
             <param name="inquiryId">идентификатор обращения</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.CreateCitizenshipChange(System.Guid,System.Boolean,System.DateTime,System.DateTime,System.Guid,System.DateTime)">
+            <summary>
+            Создатиь документ смены гражданства
+            </summary>
+            <param name="docId">идентификатор создаваемого документа</param>
+            <param name="isDeleted">флаг удалённого документа</param>
+            <param name="created">временная метка создания документа</param>
+            <param name="lastEdit">дата последнего редактирования</param>
+            <param name="survivorID">идентификтаор пострадавшего, к которому относится документ</param>
+            <param name="documentDate">дата документа</param>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Inquiry">
             <summary>

@@ -35,6 +35,33 @@
             байты guid
             </summary>
         </member>
+        <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipChangeReflection">
+            <summary>Holder for reflection information generated from Models/LifeSituations/CitizenshipChange.proto</summary>
+        </member>
+        <member name="P:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipChangeReflection.Descriptor">
+            <summary>File descriptor for Models/LifeSituations/CitizenshipChange.proto</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipChange.IDFieldNumber">
+            <summary>Field number for the "ID" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipChange.IsDeletedFieldNumber">
+            <summary>Field number for the "IsDeleted" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipChange.CreatedFieldNumber">
+            <summary>Field number for the "Created" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipChange.LastEditFieldNumber">
+            <summary>Field number for the "LastEdit" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipChange.DocumentDateFieldNumber">
+            <summary>Field number for the "DocumentDate" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipChange.SurvivorFieldNumber">
+            <summary>Field number for the "Survivor" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipChange.CitizenshipFieldNumber">
+            <summary>Field number for the "Citizenship" field.</summary>
+        </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.AddEducationLevelReflection">
             <summary>Holder for reflection information generated from Models/LifeSituations/Commands/AddEducationLevel.proto</summary>
         </member>
@@ -85,6 +112,24 @@
         </member>
         <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.AddSpeciality.SpecialityFieldNumber">
             <summary>Field number for the "Speciality" field.</summary>
+        </member>
+        <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateCitizenshipChangeReflection">
+            <summary>Holder for reflection information generated from Models/LifeSituations/Commands/CreateCitizenshipChange.proto</summary>
+        </member>
+        <member name="P:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateCitizenshipChangeReflection.Descriptor">
+            <summary>File descriptor for Models/LifeSituations/Commands/CreateCitizenshipChange.proto</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateCitizenshipChange.EntityIDFieldNumber">
+            <summary>Field number for the "EntityID" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateCitizenshipChange.DocumentDateFieldNumber">
+            <summary>Field number for the "DocumentDate" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateCitizenshipChange.SurvivorIdFieldNumber">
+            <summary>Field number for the "SurvivorId" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateCitizenshipChange.CitizenshipFieldNumber">
+            <summary>Field number for the "Citizenship" field.</summary>
         </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateInquiryReflection">
             <summary>Holder for reflection information generated from Models/LifeSituations/Commands/CreateInquiry.proto</summary>
@@ -142,6 +187,9 @@
         </member>
         <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.LifeSituationDocumentCommand.AddRegistrationStatusFieldNumber">
             <summary>Field number for the "AddRegistrationStatus" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.LifeSituationDocumentCommand.CreateCitizenshipChangeFieldNumber">
+            <summary>Field number for the "CreateCitizenshipChange" field.</summary>
         </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.LifeSituationDocumentCommand.CommandOneofCase">
             <summary>Enum of possible cases for the "Command" oneof.</summary>
@@ -340,6 +388,9 @@
         </member>
         <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.LifeSituationDocument.InquiryFieldNumber">
             <summary>Field number for the "Inquiry" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.LifeSituationDocument.CitizenshipChangeFieldNumber">
+            <summary>Field number for the "CitizenshipChange" field.</summary>
         </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.LifeSituationDocument.DocumentOneofCase">
             <summary>Enum of possible cases for the "Document" oneof.</summary>

@@ -35,33 +35,6 @@
             байты guid
             </summary>
         </member>
-        <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipChangeReflection">
-            <summary>Holder for reflection information generated from Models/LifeSituations/CitizenshipChange.proto</summary>
-        </member>
-        <member name="P:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipChangeReflection.Descriptor">
-            <summary>File descriptor for Models/LifeSituations/CitizenshipChange.proto</summary>
-        </member>
-        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipChange.IDFieldNumber">
-            <summary>Field number for the "ID" field.</summary>
-        </member>
-        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipChange.IsDeletedFieldNumber">
-            <summary>Field number for the "IsDeleted" field.</summary>
-        </member>
-        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipChange.CreatedFieldNumber">
-            <summary>Field number for the "Created" field.</summary>
-        </member>
-        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipChange.LastEditFieldNumber">
-            <summary>Field number for the "LastEdit" field.</summary>
-        </member>
-        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipChange.DocumentDateFieldNumber">
-            <summary>Field number for the "DocumentDate" field.</summary>
-        </member>
-        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipChange.SurvivorFieldNumber">
-            <summary>Field number for the "Survivor" field.</summary>
-        </member>
-        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipChange.CitizenshipFieldNumber">
-            <summary>Field number for the "Citizenship" field.</summary>
-        </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.AddEducationLevelReflection">
             <summary>Holder for reflection information generated from Models/LifeSituations/Commands/AddEducationLevel.proto</summary>
         </member>
@@ -77,30 +50,6 @@
         <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.AddEducationLevel.DetailsFieldNumber">
             <summary>Field number for the "Details" field.</summary>
         </member>
-        <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.AddMigrationStatusReflection">
-            <summary>Holder for reflection information generated from Models/LifeSituations/Commands/AddMigrationStatus.proto</summary>
-        </member>
-        <member name="P:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.AddMigrationStatusReflection.Descriptor">
-            <summary>File descriptor for Models/LifeSituations/Commands/AddMigrationStatus.proto</summary>
-        </member>
-        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.AddMigrationStatus.EntityIDFieldNumber">
-            <summary>Field number for the "EntityID" field.</summary>
-        </member>
-        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.AddMigrationStatus.DetailsFieldNumber">
-            <summary>Field number for the "Details" field.</summary>
-        </member>
-        <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.AddRegistrationStatusReflection">
-            <summary>Holder for reflection information generated from Models/LifeSituations/Commands/AddRegistrationStatus.proto</summary>
-        </member>
-        <member name="P:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.AddRegistrationStatusReflection.Descriptor">
-            <summary>File descriptor for Models/LifeSituations/Commands/AddRegistrationStatus.proto</summary>
-        </member>
-        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.AddRegistrationStatus.EntityIDFieldNumber">
-            <summary>Field number for the "EntityID" field.</summary>
-        </member>
-        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.AddRegistrationStatus.DetailsFieldNumber">
-            <summary>Field number for the "Details" field.</summary>
-        </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.AddSpecialityReflection">
             <summary>Holder for reflection information generated from Models/LifeSituations/Commands/AddSpeciality.proto</summary>
         </member>
@@ -112,24 +61,6 @@
         </member>
         <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.AddSpeciality.SpecialityFieldNumber">
             <summary>Field number for the "Speciality" field.</summary>
-        </member>
-        <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateCitizenshipChangeReflection">
-            <summary>Holder for reflection information generated from Models/LifeSituations/Commands/CreateCitizenshipChange.proto</summary>
-        </member>
-        <member name="P:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateCitizenshipChangeReflection.Descriptor">
-            <summary>File descriptor for Models/LifeSituations/Commands/CreateCitizenshipChange.proto</summary>
-        </member>
-        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateCitizenshipChange.EntityIDFieldNumber">
-            <summary>Field number for the "EntityID" field.</summary>
-        </member>
-        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateCitizenshipChange.DocumentDateFieldNumber">
-            <summary>Field number for the "DocumentDate" field.</summary>
-        </member>
-        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateCitizenshipChange.SurvivorIdFieldNumber">
-            <summary>Field number for the "SurvivorId" field.</summary>
-        </member>
-        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateCitizenshipChange.CitizenshipFieldNumber">
-            <summary>Field number for the "Citizenship" field.</summary>
         </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateInquiryReflection">
             <summary>Holder for reflection information generated from Models/LifeSituations/Commands/CreateInquiry.proto</summary>
@@ -154,6 +85,24 @@
         </member>
         <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateInquiry.CitizenshipFieldNumber">
             <summary>Field number for the "Citizenship" field.</summary>
+        </member>
+        <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateRecordUpdateDocumentReflection">
+            <summary>Holder for reflection information generated from Models/LifeSituations/Commands/CreateRecordUpdateDocument.proto</summary>
+        </member>
+        <member name="P:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateRecordUpdateDocumentReflection.Descriptor">
+            <summary>File descriptor for Models/LifeSituations/Commands/CreateRecordUpdateDocument.proto</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateRecordUpdateDocument.EntityIDFieldNumber">
+            <summary>Field number for the "EntityID" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateRecordUpdateDocument.DocumentDateFieldNumber">
+            <summary>Field number for the "DocumentDate" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateRecordUpdateDocument.SurvivorIdFieldNumber">
+            <summary>Field number for the "SurvivorId" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateRecordUpdateDocument.TypeFieldNumber">
+            <summary>Field number for the "Type" field.</summary>
         </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.LifeSituationDocumentCommandReflection">
             <summary>Holder for reflection information generated from Models/LifeSituations/Commands/LifeSituationDocumentCommand.proto</summary>
@@ -182,14 +131,17 @@
         <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.LifeSituationDocumentCommand.SetWorkingExperienceFieldNumber">
             <summary>Field number for the "SetWorkingExperience" field.</summary>
         </member>
-        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.LifeSituationDocumentCommand.AddMigrationStatusFieldNumber">
-            <summary>Field number for the "AddMigrationStatus" field.</summary>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.LifeSituationDocumentCommand.SetMigrationStatusFieldNumber">
+            <summary>Field number for the "SetMigrationStatus" field.</summary>
         </member>
-        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.LifeSituationDocumentCommand.AddRegistrationStatusFieldNumber">
-            <summary>Field number for the "AddRegistrationStatus" field.</summary>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.LifeSituationDocumentCommand.SetRegistrationStatusFieldNumber">
+            <summary>Field number for the "SetRegistrationStatus" field.</summary>
         </member>
-        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.LifeSituationDocumentCommand.CreateCitizenshipChangeFieldNumber">
-            <summary>Field number for the "CreateCitizenshipChange" field.</summary>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.LifeSituationDocumentCommand.SetCitizenshipFieldNumber">
+            <summary>Field number for the "SetCitizenship" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.LifeSituationDocumentCommand.CreateRecordUpdateDocumentFieldNumber">
+            <summary>Field number for the "CreateRecordUpdateDocument" field.</summary>
         </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.LifeSituationDocumentCommand.CommandOneofCase">
             <summary>Enum of possible cases for the "Command" oneof.</summary>
@@ -208,6 +160,18 @@
         </member>
         <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.SetChildren.DetailsFieldNumber">
             <summary>Field number for the "Details" field.</summary>
+        </member>
+        <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.SetCitizenshipReflection">
+            <summary>Holder for reflection information generated from Models/LifeSituations/Commands/SetCitizenship.proto</summary>
+        </member>
+        <member name="P:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.SetCitizenshipReflection.Descriptor">
+            <summary>File descriptor for Models/LifeSituations/Commands/SetCitizenship.proto</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.SetCitizenship.EntityIDFieldNumber">
+            <summary>Field number for the "EntityID" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.SetCitizenship.CitizenshipFieldNumber">
+            <summary>Field number for the "Citizenship" field.</summary>
         </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.SetDomicileReflection">
             <summary>Holder for reflection information generated from Models/LifeSituations/Commands/SetDomicile.proto</summary>
@@ -241,6 +205,30 @@
         </member>
         <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.SetDomicile.OtherPeopleDetailsFieldNumber">
             <summary>Field number for the "OtherPeopleDetails" field.</summary>
+        </member>
+        <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.SetMigrationStatusReflection">
+            <summary>Holder for reflection information generated from Models/LifeSituations/Commands/SetMigrationStatus.proto</summary>
+        </member>
+        <member name="P:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.SetMigrationStatusReflection.Descriptor">
+            <summary>File descriptor for Models/LifeSituations/Commands/SetMigrationStatus.proto</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.SetMigrationStatus.EntityIDFieldNumber">
+            <summary>Field number for the "EntityID" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.SetMigrationStatus.DetailsFieldNumber">
+            <summary>Field number for the "Details" field.</summary>
+        </member>
+        <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.SetRegistrationStatusReflection">
+            <summary>Holder for reflection information generated from Models/LifeSituations/Commands/SetRegistrationStatus.proto</summary>
+        </member>
+        <member name="P:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.SetRegistrationStatusReflection.Descriptor">
+            <summary>File descriptor for Models/LifeSituations/Commands/SetRegistrationStatus.proto</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.SetRegistrationStatus.EntityIDFieldNumber">
+            <summary>Field number for the "EntityID" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.SetRegistrationStatus.DetailsFieldNumber">
+            <summary>Field number for the "Details" field.</summary>
         </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.SetVulnerabilitiesReflection">
             <summary>Holder for reflection information generated from Models/LifeSituations/Commands/SetVulnerabilities.proto</summary>
@@ -389,8 +377,26 @@
         <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.LifeSituationDocument.InquiryFieldNumber">
             <summary>Field number for the "Inquiry" field.</summary>
         </member>
-        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.LifeSituationDocument.CitizenshipChangeFieldNumber">
-            <summary>Field number for the "CitizenshipChange" field.</summary>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.LifeSituationDocument.CitizenshipUpdateFieldNumber">
+            <summary>Field number for the "CitizenshipUpdate" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.LifeSituationDocument.ChildrenUpdateFieldNumber">
+            <summary>Field number for the "ChildrenUpdate" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.LifeSituationDocument.DomicileUpdateFieldNumber">
+            <summary>Field number for the "DomicileUpdate" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.LifeSituationDocument.EducationUpdateFieldNumber">
+            <summary>Field number for the "EducationUpdate" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.LifeSituationDocument.MigrationStatusUpdateFieldNumber">
+            <summary>Field number for the "MigrationStatusUpdate" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.LifeSituationDocument.RegistrationStatusUpdateFieldNumber">
+            <summary>Field number for the "RegistrationStatusUpdate" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.LifeSituationDocument.SpecialitiesUpdateFieldNumber">
+            <summary>Field number for the "SpecialitiesUpdate" field.</summary>
         </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.LifeSituationDocument.DocumentOneofCase">
             <summary>Enum of possible cases for the "Document" oneof.</summary>
@@ -517,6 +523,159 @@
         </member>
         <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Records.SpecialityRecord.SpecialityFieldNumber">
             <summary>Field number for the "Speciality" field.</summary>
+        </member>
+        <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.RecordUpdateDocumentsReflection">
+            <summary>Holder for reflection information generated from Models/LifeSituations/RecordUpdateDocuments.proto</summary>
+        </member>
+        <member name="P:SafeHouseAMS.Transport.Protos.Models.LifeSituations.RecordUpdateDocumentsReflection.Descriptor">
+            <summary>File descriptor for Models/LifeSituations/RecordUpdateDocuments.proto</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.ChildrenUpdate.IDFieldNumber">
+            <summary>Field number for the "ID" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.ChildrenUpdate.IsDeletedFieldNumber">
+            <summary>Field number for the "IsDeleted" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.ChildrenUpdate.CreatedFieldNumber">
+            <summary>Field number for the "Created" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.ChildrenUpdate.LastEditFieldNumber">
+            <summary>Field number for the "LastEdit" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.ChildrenUpdate.DocumentDateFieldNumber">
+            <summary>Field number for the "DocumentDate" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.ChildrenUpdate.SurvivorFieldNumber">
+            <summary>Field number for the "Survivor" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.ChildrenUpdate.RecordFieldNumber">
+            <summary>Field number for the "Record" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipUpdate.IDFieldNumber">
+            <summary>Field number for the "ID" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipUpdate.IsDeletedFieldNumber">
+            <summary>Field number for the "IsDeleted" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipUpdate.CreatedFieldNumber">
+            <summary>Field number for the "Created" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipUpdate.LastEditFieldNumber">
+            <summary>Field number for the "LastEdit" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipUpdate.DocumentDateFieldNumber">
+            <summary>Field number for the "DocumentDate" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipUpdate.SurvivorFieldNumber">
+            <summary>Field number for the "Survivor" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.CitizenshipUpdate.RecordFieldNumber">
+            <summary>Field number for the "Record" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.DomicileUpdate.IDFieldNumber">
+            <summary>Field number for the "ID" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.DomicileUpdate.IsDeletedFieldNumber">
+            <summary>Field number for the "IsDeleted" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.DomicileUpdate.CreatedFieldNumber">
+            <summary>Field number for the "Created" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.DomicileUpdate.LastEditFieldNumber">
+            <summary>Field number for the "LastEdit" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.DomicileUpdate.DocumentDateFieldNumber">
+            <summary>Field number for the "DocumentDate" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.DomicileUpdate.SurvivorFieldNumber">
+            <summary>Field number for the "Survivor" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.DomicileUpdate.RecordFieldNumber">
+            <summary>Field number for the "Record" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.EducationUpdate.IDFieldNumber">
+            <summary>Field number for the "ID" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.EducationUpdate.IsDeletedFieldNumber">
+            <summary>Field number for the "IsDeleted" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.EducationUpdate.CreatedFieldNumber">
+            <summary>Field number for the "Created" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.EducationUpdate.LastEditFieldNumber">
+            <summary>Field number for the "LastEdit" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.EducationUpdate.DocumentDateFieldNumber">
+            <summary>Field number for the "DocumentDate" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.EducationUpdate.SurvivorFieldNumber">
+            <summary>Field number for the "Survivor" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.EducationUpdate.RecordsFieldNumber">
+            <summary>Field number for the "Records" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.MigrationStatusUpdate.IDFieldNumber">
+            <summary>Field number for the "ID" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.MigrationStatusUpdate.IsDeletedFieldNumber">
+            <summary>Field number for the "IsDeleted" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.MigrationStatusUpdate.CreatedFieldNumber">
+            <summary>Field number for the "Created" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.MigrationStatusUpdate.LastEditFieldNumber">
+            <summary>Field number for the "LastEdit" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.MigrationStatusUpdate.DocumentDateFieldNumber">
+            <summary>Field number for the "DocumentDate" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.MigrationStatusUpdate.SurvivorFieldNumber">
+            <summary>Field number for the "Survivor" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.MigrationStatusUpdate.RecordFieldNumber">
+            <summary>Field number for the "Record" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.RegistrationStatusUpdate.IDFieldNumber">
+            <summary>Field number for the "ID" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.RegistrationStatusUpdate.IsDeletedFieldNumber">
+            <summary>Field number for the "IsDeleted" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.RegistrationStatusUpdate.CreatedFieldNumber">
+            <summary>Field number for the "Created" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.RegistrationStatusUpdate.LastEditFieldNumber">
+            <summary>Field number for the "LastEdit" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.RegistrationStatusUpdate.DocumentDateFieldNumber">
+            <summary>Field number for the "DocumentDate" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.RegistrationStatusUpdate.SurvivorFieldNumber">
+            <summary>Field number for the "Survivor" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.RegistrationStatusUpdate.RecordFieldNumber">
+            <summary>Field number for the "Record" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SpecialitiesUpdate.IDFieldNumber">
+            <summary>Field number for the "ID" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SpecialitiesUpdate.IsDeletedFieldNumber">
+            <summary>Field number for the "IsDeleted" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SpecialitiesUpdate.CreatedFieldNumber">
+            <summary>Field number for the "Created" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SpecialitiesUpdate.LastEditFieldNumber">
+            <summary>Field number for the "LastEdit" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SpecialitiesUpdate.DocumentDateFieldNumber">
+            <summary>Field number for the "DocumentDate" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SpecialitiesUpdate.SurvivorFieldNumber">
+            <summary>Field number for the "Survivor" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SpecialitiesUpdate.RecordsFieldNumber">
+            <summary>Field number for the "Records" field.</summary>
         </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.VulnerabilityFactorsReflection">
             <summary>Holder for reflection information generated from Models/LifeSituations/VulnerabilityFactors.proto</summary>

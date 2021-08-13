@@ -122,29 +122,6 @@
             Timestamp последнего изменения модели
             </summary>
         </member>
-        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.CitizenshipChange">
-            <summary>
-            Документ о смене граждаснтва
-            </summary>
-        </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.CitizenshipChange.Citizenship">
-            <summary>
-            Новая запись о гражданстве
-            </summary>
-        </member>
-        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.CitizenshipChange.#ctor(System.Guid,System.Boolean,System.DateTime,System.DateTime,System.DateTime,SafeHouseAMS.BizLayer.Survivors.Survivor,SafeHouseAMS.BizLayer.LifeSituations.Records.CitizenshipRecord)">
-            <summary>
-            ctor
-            </summary>
-            <param name="id">идентификатор документа</param>
-            <param name="isDeleted">признак удалённого документа</param>
-            <param name="created">дата создания</param>
-            <param name="lastEdit">дата последнего редактирования</param>
-            <param name="documentDate">дата документа</param>
-            <param name="survivor">пострадавший, к которому относится документ</param>
-            <param name="citizenship">собственно запись о гражданстве</param>
-            <exception cref="T:System.ArgumentNullException">если передали null, куда не следует</exception>
-        </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddEducationLevel">
             <summary>
             Команда добавления уровня образования
@@ -168,42 +145,6 @@
             <param name="level">Уровень образования</param>
             <param name="details">Дополнительные детали</param>
         </member>
-        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddMigrationStatus">
-            <summary>
-            Команда добавления записи о миграционном стсатусе
-            </summary>
-        </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddMigrationStatus.Details">
-            <summary>
-            Собственно миграционный статус
-            </summary>
-        </member>
-        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddMigrationStatus.#ctor(System.Guid,System.String)">
-            <summary>
-            Ctor
-            </summary>
-            <param name="entityID">идентификатор документ</param>
-            <param name="details">миграционный статус</param>
-            <exception cref="T:System.ArgumentNullException">если специальность была null</exception>
-        </member>
-        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddRegistrationStatus">
-            <summary>
-            Команда добавления записи о статусе регистрации
-            </summary>
-        </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddRegistrationStatus.Details">
-            <summary>
-            Собственно статус регистрации
-            </summary>
-        </member>
-        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddRegistrationStatus.#ctor(System.Guid,System.String)">
-            <summary>
-            Ctor
-            </summary>
-            <param name="entityID">идентификатор документ</param>
-            <param name="details">статус регистрации</param>
-            <exception cref="T:System.ArgumentNullException">если специальность была null</exception>
-        </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.AddSpeciality">
             <summary>
             Команда добавления записи о специальности
@@ -222,49 +163,32 @@
             <param name="speciality">наименование специальности</param>
             <exception cref="T:System.ArgumentNullException">если специальность была null</exception>
         </member>
-        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateCitizenshipChange">
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateDocument">
             <summary>
-            Команда создания документа о смене гражданства
+            абстрактный класс команды создания документа
             </summary>
         </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateCitizenshipChange.SurvivorID">
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateDocument.SurvivorID">
             <summary>
             Идентификатор пострадавшего
             </summary>
         </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateCitizenshipChange.DocumentDate">
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateDocument.DocumentDate">
             <summary>
             Дата документа
             </summary>
         </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateCitizenshipChange.Citizenship">
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateDocument.#ctor(System.Guid,System.Guid,System.DateTime)">
             <summary>
-            Новое значение для гражданства
+            ctor
             </summary>
-        </member>
-        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateCitizenshipChange.#ctor(System.Guid,System.Guid,System.DateTime,System.String)">
-            <summary>
-            Ctor
-            </summary>
-            <param name="entityID">идентификатор создаваемого документа</param>
-            <param name="documentDate">дата документа</param>
-            <param name="citizenship">Новое гражданство</param>
-            <param name="survivorID">Идентификатор пострадавшего</param>
-            <exception cref="T:System.ArgumentNullException">Если переданное гражданство было null</exception>
+            <param name="entityID">идентификатор документа</param>
+            <param name="survivorID">идентификатор пострадавшего, к которому относится документ</param>
+            <param name="documentDate">дата докуменета</param>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateInquiry">
             <summary>
             Создать новы документ обращения
-            </summary>
-        </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateInquiry.SurvivorID">
-            <summary>
-            пострадавший
-            </summary>
-        </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateInquiry.DocumentDate">
-            <summary>
-            Дата документа
             </summary>
         </member>
         <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateInquiry.IsJuvenile">
@@ -293,6 +217,20 @@
             <param name="inquirySources">источники обращения</param>
             <param name="citizenship">гражданство</param>
             <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateRecordUpdateDocument`1">
+            <summary>
+            Команда создания документа обновления статуса по определенному типу записи
+            </summary>
+            <typeparam name="T">тип записи, который обновляется</typeparam>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.CreateRecordUpdateDocument`1.#ctor(System.Guid,System.Guid,System.DateTime)">
+            <summary>
+            ctor
+            </summary>
+            <param name="entityID">идентификатор создаваемого документа</param>
+            <param name="survivorID">идентификатор пострадавшего</param>
+            <param name="documentDate">дата документа</param>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.LifeSituationDocumentCommand">
             <summary>
@@ -327,6 +265,24 @@
             <param name="entityID">идентификатор документа, на котором выполняется команда</param>
             <param name="hasChildren">Есть ли дети</param>
             <param name="details">подробности о имеющихся детях</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetCitizenship">
+            <summary>
+            Установить запись о гражданстве в соответствующем документе
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetCitizenship.Citizenship">
+            <summary>
+            СОбственно значение гражданства
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetCitizenship.#ctor(System.Guid,System.String)">
+            <summary>
+            ctor
+            </summary>
+            <param name="entityID">идентификатор документа для которого устанавливается гражданство</param>
+            <param name="citizenship">значение</param>
+            <exception cref="T:System.ArgumentNullException">если значение было null</exception>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetDomicile">
             <summary>
@@ -408,6 +364,42 @@
             <param name="otherPeopleDetails">если заполнено - то с другими людьми</param>
             <exception cref="T:System.ArgumentNullException">если место жительства было null</exception>
         </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetMigrationStatus">
+            <summary>
+            Команда добавления записи о миграционном стсатусе
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetMigrationStatus.Details">
+            <summary>
+            Собственно миграционный статус
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetMigrationStatus.#ctor(System.Guid,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="entityID">идентификатор документ</param>
+            <param name="details">миграционный статус</param>
+            <exception cref="T:System.ArgumentNullException">если специальность была null</exception>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetRegistrationStatus">
+            <summary>
+            Команда добавления записи о статусе регистрации
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetRegistrationStatus.Details">
+            <summary>
+            Собственно статус регистрации
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetRegistrationStatus.#ctor(System.Guid,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="entityID">идентификатор документ</param>
+            <param name="details">статус регистрации</param>
+            <exception cref="T:System.ArgumentNullException">если специальность была null</exception>
+        </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetVulnerabilities">
             <summary>
             Команда установки факторов уязвимости
@@ -443,6 +435,136 @@
             <param name="entityID">Идентификатор документа</param>
             <param name="details">Опыт работы</param>
             <exception cref="T:System.ArgumentNullException">если опыт был null</exception>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Documents.Inquiry">
+            <summary>
+            Обращение за помощью
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Documents.Inquiry.IsJuvenile">
+            <summary>
+            несовершеннолетний на момент обращения
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Documents.Inquiry.InquirySources">
+            <summary>
+            Источники обращения
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Documents.Inquiry.Citizenship">
+            <summary>
+            Гражданство в момент обращения
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Documents.Inquiry.Domicile">
+            <summary>
+            Место проживания в момент обращения + где проиживает
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Documents.Inquiry.HasChildren">
+            <summary>
+            Наличие детей
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Documents.Inquiry.EducationLevel">
+            <summary>
+            Уровень образования
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Documents.Inquiry.Specialities">
+            <summary>
+            Специальности
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Documents.Inquiry.WorkingExperience">
+            <summary>
+            Опыт работы
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Documents.Inquiry.VulnerabilityFactors">
+            <summary>
+            Иные факторы уязвимости
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Documents.Inquiry.MigrationStatus">
+            <summary>
+            Запись о миграционном статусе
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Documents.Inquiry.RegistrationStatus">
+            <summary>
+            Запись о статусе регистрации
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Documents.Inquiry.#ctor(System.Guid,System.Boolean,System.DateTime,System.DateTime,System.DateTime,SafeHouseAMS.BizLayer.Survivors.Survivor,System.Boolean,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.InquirySources.IInquirySource},SafeHouseAMS.BizLayer.LifeSituations.Records.CitizenshipRecord,SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord,SafeHouseAMS.BizLayer.LifeSituations.Records.ChildrenRecord,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord},System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Records.SpecialityRecord},System.String,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Vulnerability},SafeHouseAMS.BizLayer.LifeSituations.Records.MigrationStatusRecord,SafeHouseAMS.BizLayer.LifeSituations.Records.RegistrationStatusRecord)">
+            <summary>
+            ctor
+            </summary>
+            <param name="id">идентификатор</param>
+            <param name="isDeleted">признак удалённой записи</param>
+            <param name="created">дата создания записи</param>
+            <param name="lastEdit">дата последнего редактирования</param>
+            <param name="documentDate">дата обращения</param>
+            <param name="survivor">пострадавший</param>
+            <param name="isJuvenile">несовершеннолетний на момент обращения</param>
+            <param name="inquirySources">источники обращения</param>
+            <param name="citizenship">гразданство</param>
+            <param name="domicile">место жительства, если известно</param>
+            <param name="hasChildren">статус по детям</param>
+            <param name="educationLevel">статус образования</param>
+            <param name="specialities">специальности</param>
+            <param name="workingExperience">опыт работы</param>
+            <param name="vulnerabilityFactors">факторы уязвимости</param>
+            <param name="migrationStatus">запись о миграционном статусе</param>
+            <param name="registrationStatus">запись о статусе регистрации</param>
+            <exception cref="T:System.ArgumentNullException">если нет гражданства или источников обращения</exception>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Documents.MultiRecordsUpdate`1">
+            <summary>
+            Документ обновляющий сразу коллекцию записей
+            </summary>
+            <typeparam name="T">тип записи</typeparam>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Documents.MultiRecordsUpdate`1.Records">
+            <summary>
+            добавленные записи
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Documents.MultiRecordsUpdate`1.#ctor(System.Guid,System.Boolean,System.DateTime,System.DateTime,System.DateTime,SafeHouseAMS.BizLayer.Survivors.Survivor,System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            ctor
+            </summary>
+            <param name="id">идентификатор записи</param>
+            <param name="isDeleted">признак удалённой записи</param>
+            <param name="created">дата создания записи</param>
+            <param name="lastEdit">дата последнего изменения записи</param>
+            <param name="documentDate">дата документа</param>
+            <param name="survivor">пострадавший, к которому относится этот документ</param>
+            <param name="records">собственно запись обновляемая в документе</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Documents.SingleRecordUpdate`1">
+            <summary>
+            Документ обновления записи о пострадавшем
+            </summary>
+            <typeparam name="T">Тип обновляемой записи</typeparam>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Documents.SingleRecordUpdate`1.Record">
+            <summary>
+            Добавленная запись
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Documents.SingleRecordUpdate`1.#ctor(System.Guid,System.Boolean,System.DateTime,System.DateTime,System.DateTime,SafeHouseAMS.BizLayer.Survivors.Survivor,`0)">
+            <summary>
+            ctor
+            </summary>
+            <param name="id">идентификатор записи</param>
+            <param name="isDeleted">признак удалённой записи</param>
+            <param name="created">дата создания записи</param>
+            <param name="lastEdit">дата последнего изменения записи</param>
+            <param name="documentDate">дата документа</param>
+            <param name="survivor">пострадавший, к которому относится этот документ</param>
+            <param name="record">собственно запись обновляемая в документе</param>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsAggregate">
             <summary>
@@ -608,7 +730,7 @@
             </summary>
             <param name="inquiryId">идентификатор обращения</param>
         </member>
-        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.CreateCitizenshipChange(System.Guid,System.Boolean,System.DateTime,System.DateTime,System.Guid,System.DateTime)">
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.CreateRecordUpdateDocument(System.Guid,System.Boolean,System.DateTime,System.DateTime,System.Guid,System.DateTime,System.Type)">
             <summary>
             Создатиь документ смены гражданства
             </summary>
@@ -618,89 +740,7 @@
             <param name="lastEdit">дата последнего редактирования</param>
             <param name="survivorID">идентификтаор пострадавшего, к которому относится документ</param>
             <param name="documentDate">дата документа</param>
-        </member>
-        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Inquiry">
-            <summary>
-            Обращение за помощью
-            </summary>
-        </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.IsJuvenile">
-            <summary>
-            несовершеннолетний на момент обращения
-            </summary>
-        </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.InquirySources">
-            <summary>
-            Источники обращения
-            </summary>
-        </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.Citizenship">
-            <summary>
-            Гражданство в момент обращения
-            </summary>
-        </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.Domicile">
-            <summary>
-            Место проживания в момент обращения + где проиживает
-            </summary>
-        </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.HasChildren">
-            <summary>
-            Наличие детей
-            </summary>
-        </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.EducationLevel">
-            <summary>
-            Уровень образования
-            </summary>
-        </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.Specialities">
-            <summary>
-            Специальности
-            </summary>
-        </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.WorkingExperience">
-            <summary>
-            Опыт работы
-            </summary>
-        </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.VulnerabilityFactors">
-            <summary>
-            Иные факторы уязвимости
-            </summary>
-        </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.MigrationStatus">
-            <summary>
-            Запись о миграционном статусе
-            </summary>
-        </member>
-        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.RegistrationStatus">
-            <summary>
-            Запись о статусе регистрации
-            </summary>
-        </member>
-        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Inquiry.#ctor(System.Guid,System.Boolean,System.DateTime,System.DateTime,System.DateTime,SafeHouseAMS.BizLayer.Survivors.Survivor,System.Boolean,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.InquirySources.IInquirySource},SafeHouseAMS.BizLayer.LifeSituations.Records.CitizenshipRecord,SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord,SafeHouseAMS.BizLayer.LifeSituations.Records.ChildrenRecord,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord},System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Records.SpecialityRecord},System.String,System.Collections.Generic.IEnumerable{SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Vulnerability},SafeHouseAMS.BizLayer.LifeSituations.Records.MigrationStatusRecord,SafeHouseAMS.BizLayer.LifeSituations.Records.RegistrationStatusRecord)">
-            <summary>
-            ctor
-            </summary>
-            <param name="id">идентификатор</param>
-            <param name="isDeleted">признак удалённой записи</param>
-            <param name="created">дата создания записи</param>
-            <param name="lastEdit">дата последнего редактирования</param>
-            <param name="documentDate">дата обращения</param>
-            <param name="survivor">пострадавший</param>
-            <param name="isJuvenile">несовершеннолетний на момент обращения</param>
-            <param name="inquirySources">источники обращения</param>
-            <param name="citizenship">гразданство</param>
-            <param name="domicile">место жительства, если известно</param>
-            <param name="hasChildren">статус по детям</param>
-            <param name="educationLevel">статус образования</param>
-            <param name="specialities">специальности</param>
-            <param name="workingExperience">опыт работы</param>
-            <param name="vulnerabilityFactors">факторы уязвимости</param>
-            <param name="migrationStatus">запись о миграционном статусе</param>
-            <param name="registrationStatus">запись о статусе регистрации</param>
-            <exception cref="T:System.ArgumentNullException">если нет гражданства или источников обращения</exception>
+            <param name="recordType">тип записи, которую изменяет документ</param>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.ForwardedByOrganization">
             <summary>

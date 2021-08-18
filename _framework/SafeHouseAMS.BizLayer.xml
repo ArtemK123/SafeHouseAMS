@@ -568,7 +568,7 @@
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsAggregate">
             <summary>
-            Агрегат документов жизненных ситуаций 
+            Агрегат документов жизненных ситуаций
             </summary>
         </member>
         <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsAggregate.GetAllBySurvivor(System.Guid,System.Threading.CancellationToken)">
@@ -585,6 +585,14 @@
             </summary>
             <param name="cancellationToken">токен отмены операции</param>
             <returns>Асинхронная последовательность строк - что вводили в поле "гражданство"</returns>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsAggregate.GetSurvivorReport(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Получить сводку-отчёт о пострадавшем
+            </summary>
+            <param name="survivorId">идентификатор пострадавшего</param>
+            <param name="cancellationToken">Токен отмены операции</param>
+            <returns>Отчёт о текущем состоянии ситуации у пострадавшего</returns>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository">
             <summary>
@@ -741,6 +749,14 @@
             <param name="survivorID">идентификтаор пострадавшего, к которому относится документ</param>
             <param name="documentDate">дата документа</param>
             <param name="recordType">тип записи, которую изменяет документ</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.GetSurvivorReport(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Построить отчёт о состоянии пострадавшего
+            </summary>
+            <param name="surId">Идентификатор пострадавшего</param>
+            <param name="ct">Токен отмены операции</param>
+            <returns>Сводка-отчёт о текущем состоянии пострадавшего</returns>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.ForwardedByOrganization">
             <summary>
@@ -1190,6 +1206,46 @@
             <param name="id">идентификатор записи</param>
             <param name="speciality">название специальности</param>
             <exception cref="T:System.ArgumentNullException">если специальность была пуста</exception>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.SurvivorStateReport">
+            <summary>
+            Отчёт о текущенм состоянии пострадавшего
+            </summary>
+            <param name="SurvivorID">идентификатор пострадавшего</param>
+            <param name="Children">Актуальная запись о детях, если есть</param>
+            <param name="HasChangedChildren">Были ли изменения статуса по детям?</param>
+            <param name="Citizenship">Актуальная запись о гражданстве</param>
+            <param name="HasChangedCitizenship">Были ли изменения записи о гражданстве</param>
+            <param name="Domicile">Актуальная запись о проживании</param>
+            <param name="HasChangedDomicile">Были ли изменения запимси о проживании</param>
+            <param name="Education">Коллекция записей об уровне образования</param>
+            <param name="HasChangedEducation">Были ли изменения?</param>
+            <param name="Migration">Актуальная запись о миграционном статусе</param>
+            <param name="HasChangedMigration">Были ли изменения миграционного статуса</param>
+            <param name="Registration">Актуальная запись о регистрации</param>
+            <param name="HasChangedRegistration">Были ли изменения статуса регистрации</param>
+            <param name="Specialities">Коллекция записей о специальностях</param>
+            <param name="HasChangedSpecialities">Были ли изменения специальностей</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.SurvivorStateReport.#ctor(System.Guid,SafeHouseAMS.BizLayer.LifeSituations.Records.ChildrenRecord,System.Boolean,SafeHouseAMS.BizLayer.LifeSituations.Records.CitizenshipRecord,System.Boolean,SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord,System.Boolean,System.Collections.Generic.IReadOnlyCollection{SafeHouseAMS.BizLayer.LifeSituations.Records.EducationLevelRecord},System.Boolean,SafeHouseAMS.BizLayer.LifeSituations.Records.MigrationStatusRecord,System.Boolean,SafeHouseAMS.BizLayer.LifeSituations.Records.RegistrationStatusRecord,System.Boolean,System.Collections.Generic.IReadOnlyCollection{SafeHouseAMS.BizLayer.LifeSituations.Records.SpecialityRecord},System.Boolean)">
+            <summary>
+            Отчёт о текущенм состоянии пострадавшего
+            </summary>
+            <param name="SurvivorID">идентификатор пострадавшего</param>
+            <param name="Children">Актуальная запись о детях, если есть</param>
+            <param name="HasChangedChildren">Были ли изменения статуса по детям?</param>
+            <param name="Citizenship">Актуальная запись о гражданстве</param>
+            <param name="HasChangedCitizenship">Были ли изменения записи о гражданстве</param>
+            <param name="Domicile">Актуальная запись о проживании</param>
+            <param name="HasChangedDomicile">Были ли изменения запимси о проживании</param>
+            <param name="Education">Коллекция записей об уровне образования</param>
+            <param name="HasChangedEducation">Были ли изменения?</param>
+            <param name="Migration">Актуальная запись о миграционном статусе</param>
+            <param name="HasChangedMigration">Были ли изменения миграционного статуса</param>
+            <param name="Registration">Актуальная запись о регистрации</param>
+            <param name="HasChangedRegistration">Были ли изменения статуса регистрации</param>
+            <param name="Specialities">Коллекция записей о специальностях</param>
+            <param name="HasChangedSpecialities">Были ли изменения специальностей</param>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Vulnerabilities.Addiction">
             <summary>

@@ -677,6 +677,57 @@
         <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SpecialitiesUpdate.RecordsFieldNumber">
             <summary>Field number for the "Records" field.</summary>
         </member>
+        <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SurvivorStateReportReflection">
+            <summary>Holder for reflection information generated from Models/LifeSituations/SurvivorStateReport.proto</summary>
+        </member>
+        <member name="P:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SurvivorStateReportReflection.Descriptor">
+            <summary>File descriptor for Models/LifeSituations/SurvivorStateReport.proto</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SurvivorStateReport.SurvivorIDFieldNumber">
+            <summary>Field number for the "SurvivorID" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SurvivorStateReport.ChildrenFieldNumber">
+            <summary>Field number for the "Children" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SurvivorStateReport.HasChangedChildrenFieldNumber">
+            <summary>Field number for the "HasChangedChildren" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SurvivorStateReport.CitizenshipFieldNumber">
+            <summary>Field number for the "Citizenship" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SurvivorStateReport.HasChangedCitizenshipFieldNumber">
+            <summary>Field number for the "HasChangedCitizenship" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SurvivorStateReport.DomicileFieldNumber">
+            <summary>Field number for the "Domicile" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SurvivorStateReport.HasChangedDomicileFieldNumber">
+            <summary>Field number for the "HasChangedDomicile" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SurvivorStateReport.EducationFieldNumber">
+            <summary>Field number for the "Education" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SurvivorStateReport.HasChangedEducationFieldNumber">
+            <summary>Field number for the "HasChangedEducation" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SurvivorStateReport.MigrationFieldNumber">
+            <summary>Field number for the "Migration" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SurvivorStateReport.HasChangedMigrationFieldNumber">
+            <summary>Field number for the "HasChangedMigration" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SurvivorStateReport.RegistrationFieldNumber">
+            <summary>Field number for the "Registration" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SurvivorStateReport.HasChangedRegistrationFieldNumber">
+            <summary>Field number for the "HasChangedRegistration" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SurvivorStateReport.SpecialitiesFieldNumber">
+            <summary>Field number for the "Specialities" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.SurvivorStateReport.HasChangedSpecialitiesFieldNumber">
+            <summary>Field number for the "HasChangedSpecialities" field.</summary>
+        </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.VulnerabilityFactorsReflection">
             <summary>Holder for reflection information generated from Models/LifeSituations/VulnerabilityFactors.proto</summary>
         </member>

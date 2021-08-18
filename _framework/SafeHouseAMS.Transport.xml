@@ -401,6 +401,18 @@
         <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.LifeSituationDocument.DocumentOneofCase">
             <summary>Enum of possible cases for the "Document" oneof.</summary>
         </member>
+        <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.RecordHistoryItemReflection">
+            <summary>Holder for reflection information generated from Models/LifeSituations/RecordHistoryItem.proto</summary>
+        </member>
+        <member name="P:SafeHouseAMS.Transport.Protos.Models.LifeSituations.RecordHistoryItemReflection.Descriptor">
+            <summary>File descriptor for Models/LifeSituations/RecordHistoryItem.proto</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.RecordHistoryItem.DocumentDateFieldNumber">
+            <summary>Field number for the "DocumentDate" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.RecordHistoryItem.DocumentIDFieldNumber">
+            <summary>Field number for the "DocumentID" field.</summary>
+        </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Records.ChildrenRecordReflection">
             <summary>Holder for reflection information generated from Models/LifeSituations/Records/ChildrenRecord.proto</summary>
         </member>

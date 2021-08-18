@@ -594,6 +594,15 @@
             <param name="cancellationToken">Токен отмены операции</param>
             <returns>Отчёт о текущем состоянии ситуации у пострадавшего</returns>
         </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsAggregate.GetRecordHistory``1(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Получить историю изменения статуса
+            </summary>
+            <param name="survivorId">Идентификатор пострадавшего</param>
+            <param name="cancellationToken">токен отмены</param>
+            <typeparam name="T">Тип записи</typeparam>
+            <returns>Асинхронная последовательность элементов истории изменения статуса</returns>
+        </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository">
             <summary>
             Репозиторий документов жизненных ситуаций
@@ -758,6 +767,15 @@
             <param name="ct">Токен отмены операции</param>
             <returns>Сводка-отчёт о текущем состоянии пострадавшего</returns>
         </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.GetRecordHistory``1(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Получить историю изменения статуса
+            </summary>
+            <param name="survivorId">Идентификатор пострадавшего</param>
+            <param name="cancellationToken">токен отмены</param>
+            <typeparam name="T">Тип записи</typeparam>
+            <returns>Асинхронная последовательность элементов истории изменения статуса</returns>
+        </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.ForwardedByOrganization">
             <summary>
             Перенаправлен другой организацией
@@ -908,6 +926,16 @@
             <param name="lastEdit">дата последнего редактирования</param>
             <param name="documentDate">дата действия документа</param>
             <param name="survivor">Пострадавший, к которому относится этот документ</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.RecordHistoryItem">
+            <summary>
+            Элемент истории изменения записи
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.RecordHistoryItem.#ctor(System.DateTime,System.Guid)">
+            <summary>
+            Элемент истории изменения записи
+            </summary>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Records.BaseRecord">
             <summary>

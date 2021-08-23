@@ -2700,6 +2700,23 @@ ul.rz-profile-menu {
 .rz-column-draggable {
   background-color: #2f3d43; }
 
+.rz-group-header {
+  background-color: #2f3d43;
+  padding: 15px;
+  border-bottom: 1px solid #45565d; }
+
+.rz-group-header-item {
+  border: 1px solid #45565d;
+  padding: 10px;
+  margin: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  float: left; }
+
+.rz-group-header-item-title {
+  margin-right: 5px; }
+
 .rz-paginator {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -7341,6 +7341,23 @@ ul.rz-profile-menu {
 .rz-column-draggable {
   background-color: #e6ecef; }
 
+.rz-group-header {
+  background-color: #e6ecef;
+  padding: 15px;
+  border-bottom: solid 1px #dfe7eb; }
+
+.rz-group-header-item {
+  border: solid 1px #dfe7eb;
+  padding: 10px;
+  margin: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  float: left; }
+
+.rz-group-header-item-title {
+  margin-right: 5px; }
+
 .rz-paginator {
   display: -webkit-box;
   display: -ms-flexbox;

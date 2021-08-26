@@ -7191,7 +7191,7 @@ ul.rz-profile-menu {
   right: 0;
   bottom: 0;
   background-color: rgba(136, 152, 155, 0.5);
-  z-index: 1; }
+  z-index: 2; }
 
 .rz-datatable-loading-content {
   position: absolute;

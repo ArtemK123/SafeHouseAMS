@@ -299,6 +299,11 @@
             Тип места жительства
             </summary>
         </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetDomicile.LivingPlaceComment">
+            <summary>
+            Комментарий к типу места жительства
+            </summary>
+        </member>
         <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetDomicile.LivesAlone">
             <summary>
             Живет од_на
@@ -349,13 +354,14 @@
             подробнее о других людях
             </summary>
         </member>
-        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetDomicile.#ctor(System.Guid,System.String,System.Nullable{SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.PlaceKind},System.Boolean,System.Boolean,System.String,System.String,System.String,System.String)">
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.SetDomicile.#ctor(System.Guid,System.String,System.Nullable{SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.PlaceKind},System.String,System.Boolean,System.Boolean,System.String,System.String,System.String,System.String)">
             <summary>
             Ctor
             </summary>
             <param name="entityID">идентификатор документа в рамках которого создана запись</param>
             <param name="place">место жительства</param>
             <param name="kind">тип места проживания</param>
+            <param name="livingPlaceComment">комментарий к типу места жительства</param>
             <param name="livesAlone">живет од_на</param>
             <param name="withPartner">с партнером</param>
             <param name="childrenDetails">если заполнено - то с детьми</param>
@@ -1044,6 +1050,11 @@
             Тип места проживания
             </summary>
         </member>
+        <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.LivingPlaceComment">
+            <summary>
+            комментарий к типу места жительства
+            </summary>
+        </member>
         <member name="P:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.LivesAlone">
             <summary>
             Живет од_на
@@ -1094,13 +1105,14 @@
             подробнее о других людях
             </summary>
         </member>
-        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.#ctor(System.Guid,System.String,System.Nullable{SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.PlaceKind},System.Boolean,System.Boolean,System.Boolean,System.String,System.Boolean,System.String,System.Boolean,System.String,System.Boolean,System.String)">
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.#ctor(System.Guid,System.String,System.Nullable{SafeHouseAMS.BizLayer.LifeSituations.Records.DomicileRecord.PlaceKind},System.String,System.Boolean,System.Boolean,System.Boolean,System.String,System.Boolean,System.String,System.Boolean,System.String,System.Boolean,System.String)">
             <summary>
             ctor
             </summary>
             <param name="id">идентификатор записи</param>
             <param name="place">место жительства</param>
             <param name="kind">тип места жительства</param>
+            <param name="livingPlaceComment">комментраий к типу места жительства</param>
             <param name="livesAlone">живет од_на</param>
             <param name="withPartner">с партнером</param>
             <param name="withChildren">с детьми</param>

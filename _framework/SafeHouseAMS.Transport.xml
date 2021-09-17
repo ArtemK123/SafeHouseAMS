@@ -188,6 +188,9 @@
         <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.SetDomicile.KindFieldNumber">
             <summary>Field number for the "Kind" field.</summary>
         </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.SetDomicile.LivingPlaceCommentFieldNumber">
+            <summary>Field number for the "LivingPlaceComment" field.</summary>
+        </member>
         <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.SetDomicile.LivesAloneFieldNumber">
             <summary>Field number for the "LivesAlone" field.</summary>
         </member>
@@ -454,6 +457,9 @@
         </member>
         <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Records.DomicileRecord.KindFieldNumber">
             <summary>Field number for the "Kind" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Records.DomicileRecord.LivingPlaceCommentFieldNumber">
+            <summary>Field number for the "LivingPlaceComment" field.</summary>
         </member>
         <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Records.DomicileRecord.LivesAloneFieldNumber">
             <summary>Field number for the "LivesAlone" field.</summary>

@@ -2465,8 +2465,8 @@ ul.rz-profile-menu {
 .rz-datatable-header .rz-selectable .rz-datatable-odd.rz-state-highlight > .rzi-plus {
   color: #ffffff; }
 
-.rz-selectable .rz-datatable-even:hover:not(.rz-state-highlight) > td,
-.rz-selectable .rz-datatable-odd:hover:not(.rz-state-highlight) > td {
+.rz-selectable .rz-datatable-even:hover:not(.rz-state-highlight) > td:not(.rz-frozen-cell),
+.rz-selectable .rz-datatable-odd:hover:not(.rz-state-highlight) > td:not(.rz-frozen-cell) {
   background-color: rgba(69, 86, 93, 0.5); }
 
 .rz-selectable .rz-datatable-even:hover:not(.rz-state-highlight) .rz-cell-data,

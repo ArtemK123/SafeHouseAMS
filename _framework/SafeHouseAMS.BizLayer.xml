@@ -64,6 +64,642 @@
             <param name="configuration">конфигурация</param>
             <returns>та же коллекция сервисов для chaining</returns>
         </member>
+        <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.CreateEpisode">
+            <summary>
+            Создать новый эпизод
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.CreateEpisode.SurvivorID">
+            <summary>
+            пострадавший к которому относится эта причина обращения
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.CreateEpisode.ContactReason">
+            <summary>
+            Причина обращения - виды эксплуатации или насилия с описанием
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.CreateEpisode.Place">
+            <summary>
+            Место эксплуатации - страна/город
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.CreateEpisode.Involvement">
+            <summary>
+            Вовлечение - как и кем
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.CreateEpisode.WasJuvenile">
+            <summary>
+            Был_а ли несовершеннолетней на момент вовлечения/эксплуатации/насилия
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.CreateEpisode.Duration">
+            <summary>
+            Продолжительность эксплуатации
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.CreateEpisode.ControlMethods">
+            <summary>
+            Методы контроля
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.CreateEpisode.EscapeStatus">
+            <summary>
+            Освобождение
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.CreateEpisode.#ctor(System.Guid,System.Guid,SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason,System.String,System.String,System.Boolean,System.TimeSpan,SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethods,SafeHouseAMS.BizLayer.ExploitationEpisodes.EscapeStatus)">
+            <summary>
+            конструктор команды создания нового эпизода
+            </summary>
+            <param name="entityID">идентификтаор эпизода</param>
+            <param name="survivorId">идентификатор пострадавшего</param>
+            <param name="contactReason"></param>
+            <param name="place"></param>
+            <param name="involvement"></param>
+            <param name="wasJuvenile"></param>
+            <param name="duration"></param>
+            <param name="controlMethods"></param>
+            <param name="escapeStatus"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.EpisodeCommand">
+            <summary>
+            базовый класс команды изменения эпизодов эксплуатации
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.EpisodeCommand.#ctor(System.Guid)">
+            <summary>
+            ctor
+            </summary>
+            <param name="entityID">идентификатор эпизода</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason">
+            <summary>
+            Причина обращения
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason.Involvement">
+            <summary>
+            вовлечение в эксплуатацию
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason.Cse">
+            <summary>
+            Коммерческая сексуальная эксплуатация
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason.ForcedLabour">
+            <summary>
+            Принудительный труд
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason.ForcedMarriage">
+            <summary>
+            Принудительный брак
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason.Cre">
+            <summary>
+            Коммерческая репродуктивная эксплуатация
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason.Begging">
+            <summary>
+            попрошайничество
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason.ForcedCriminalActivity">
+            <summary>
+            принудительная криминальная активность
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason.OtherExploitationKind">
+            <summary>
+            другой вид эксплуатации
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason.SexualViolence">
+            <summary>
+            сексуальное насилие
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason.DomesticViolence">
+            <summary>
+            домашнее насилие
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason.OtherViolenceKind">
+            <summary>
+            другой вид насилия
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason.#ctor(SafeHouseAMS.BizLayer.ExploitationEpisodes.DetailedContactReason,SafeHouseAMS.BizLayer.ExploitationEpisodes.DetailedContactReason{SafeHouseAMS.BizLayer.ExploitationEpisodes.CseType},SafeHouseAMS.BizLayer.ExploitationEpisodes.DetailedContactReason{SafeHouseAMS.BizLayer.ExploitationEpisodes.ForcedLabourType},SafeHouseAMS.BizLayer.ExploitationEpisodes.DetailedContactReason{SafeHouseAMS.BizLayer.ExploitationEpisodes.ForcedMarriageKind},SafeHouseAMS.BizLayer.ExploitationEpisodes.DetailedContactReason,SafeHouseAMS.BizLayer.ExploitationEpisodes.DetailedContactReason,SafeHouseAMS.BizLayer.ExploitationEpisodes.DetailedContactReason{SafeHouseAMS.BizLayer.ExploitationEpisodes.CriminalActivityType},SafeHouseAMS.BizLayer.ExploitationEpisodes.DetailedContactReason,SafeHouseAMS.BizLayer.ExploitationEpisodes.DetailedContactReason,SafeHouseAMS.BizLayer.ExploitationEpisodes.DetailedContactReason,SafeHouseAMS.BizLayer.ExploitationEpisodes.DetailedContactReason)">
+            <summary>
+            конструктор причины обращения
+            </summary>
+            <param name="involvement">вовление</param>
+            <param name="cse">коммерческая сексуальная эксплуатация</param>
+            <param name="forcedLabour">принудительный труд</param>
+            <param name="forcedMarriage">принудительныый брак</param>
+            <param name="cre">коммерческая репродуктивная эксплуатация</param>
+            <param name="begging">попрошайничество</param>
+            <param name="forcedCriminalActivity">принудительная криминальная активность</param>
+            <param name="otherExploitationKind">другой вид эксплуатации</param>
+            <param name="sexualViolence">сексуальное насилие</param>
+            <param name="domesticViolence">домашнее насилие</param>
+            <param name="otherViolenceKind">другой вид насилия</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind">
+            <summary>
+            Основные методы контроля
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.None">
+            <summary>
+            пустое значение по умолчанию
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.Undocumentation">
+            <summary>
+            Лишение документов
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.Debt">
+            <summary>
+            долговая кабала
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.SalaryRetention">
+            <summary>
+            удержание зарплаты
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.IndividualThreatening">
+            <summary>
+            угрозы индивиду
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.FamilyThreatening">
+            <summary>
+            угрозы семье или близким
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.Overtiming">
+            <summary>
+            Чрезмерные часы работы
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.Blackmail">
+            <summary>
+            ложные обещания / обман / шантаж
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.ThreateningPolice">
+            <summary>
+            запугивание фактом нарушения местных законов / угрозы обращения в полицию (угрозы депортации или тюремного заключения)
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.FoodDeprivation">
+            <summary>
+            ограничения или лишение еды / воды / сна / тепла
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.FreedomRestrictions">
+            <summary>
+            ограничение свободы передвижения / удержание в неизвестном месте / изменение местонахождения
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.CommunicationRestrictions">
+            <summary>
+             ограничения общения/ возможностей обращения за помощью / возможностей получить информацию о своих правах
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.PsychologicalViolence">
+            <summary>
+            психологическое насилие
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.PhysicalViolence">
+            <summary>
+            физическое насилие
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.SexualViolence">
+            <summary>
+            Сексуальное насилие
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.Alcoholization">
+            <summary>
+            предоставление алкоголя
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.Narcotization">
+            <summary>
+            Предоставление наркотиков
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.MedicalHelpDeprivation">
+            <summary>
+            Отсутствие необходимой медицинской помощи
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.Religion">
+            <summary>
+            воздействие религиозных ритуалов
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind.Other">
+            <summary>
+            Другие способы
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethods">
+            <summary>
+            Информация о примененных методах контроля
+            </summary>
+            <param name="Methods">Применённые методы</param>
+            <param name="DebtKind">Уточнение о типе долговой кабалы</param>
+            <param name="OtherDetails">Уточнение для других методов контроля</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethods.#ctor(SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethodKind,System.Nullable{SafeHouseAMS.BizLayer.ExploitationEpisodes.DebtKind},System.String)">
+            <summary>
+            Информация о примененных методах контроля
+            </summary>
+            <param name="Methods">Применённые методы</param>
+            <param name="DebtKind">Уточнение о типе долговой кабалы</param>
+            <param name="OtherDetails">Уточнение для других методов контроля</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.CriminalActivityType">
+            <summary>
+            типы криминальной активности
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.CriminalActivityType.None">
+            <summary>
+            дефолтное значение
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.CriminalActivityType.DrugTrafficking">
+            <summary>
+            распространение наркотиков
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.CriminalActivityType.DrugStoring">
+            <summary>
+            хранение наркотиков
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.CriminalActivityType.Procuring">
+            <summary>
+            сутенёрство
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.CriminalActivityType.Other">
+            <summary>
+            другое
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.CseType">
+            <summary>
+            Тип коммерческой сексуальной эксплуатации
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.CseType.None">
+            <summary>
+            не указано
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.CseType.Prostitution">
+            <summary>
+            Проституция
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.CseType.Escort">
+            <summary>
+            Эскорт
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.CseType.Consummation">
+            <summary>
+            Консумация
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.CseType.Striptease">
+            <summary>
+            Стриптиз
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.CseType.MassageParlor">
+            <summary>
+            Массажный салон
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.CseType.Webcam">
+            <summary>
+            вебкам
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.CseType.Pornography">
+            <summary>
+            порно
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.CseType.Other">
+            <summary>
+            Другое
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.DebtKind">
+            <summary>
+            вид долговой кабалы
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.DebtKind.None">
+            <summary>
+            дефолтное значение
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.DebtKind.Transport">
+            <summary>
+            Долг за перевозку (билеты, документы)
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.DebtKind.VitalNeeds">
+            <summary>
+            Долг за жилье, питание, мед. помощь, обеспечение других нужд
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.DebtKind.Investings">
+            <summary>
+            Долг за рекламу и другие вложения
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.DebtKind.Embezzlement">
+            <summary>
+            Долг за растрату, порчу, перерасход и др.
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.DebtKind.Penalties">
+            <summary>
+            «Штрафы» за выходные и другие «нарушения»
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.DetailedContactReason`1">
+            <summary>
+            Причина обращения с текстовыми деталями и уточнением типа
+            </summary>
+            <param name="Details">Текстовые детали</param>
+            <param name="Type">Уточнение типа</param>
+            <typeparam name="T">Тип детализации</typeparam>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.ExploitationEpisodes.DetailedContactReason`1.#ctor(System.String,`0)">
+            <summary>
+            Причина обращения с текстовыми деталями и уточнением типа
+            </summary>
+            <param name="Details">Текстовые детали</param>
+            <param name="Type">Уточнение типа</param>
+            <typeparam name="T">Тип детализации</typeparam>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.ExploitationEpisodes.DetailedContactReason`1.GetTypeDescription">
+            <summary>
+            Получить строковое описание типа
+            </summary>
+            <returns>Строка с описанием типа</returns>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.DetailedContactReason">
+            <summary>
+            Причина обрщения с текстовыми деталями
+            </summary>
+            <param name="Details">текстовые детали</param>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.ExploitationEpisodes.DetailedContactReason.#ctor(System.String)">
+            <summary>
+            Причина обрщения с текстовыми деталями
+            </summary>
+            <param name="Details">текстовые детали</param>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.Episode">
+            <summary>
+            Эпизод эксплуатации
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Episode.Survivor">
+            <summary>
+            пострадавший к которому относится эта причина обращения
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Episode.ContactReason">
+            <summary>
+            Причина обращения - виды эксплуатации или насилия с описанием
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Episode.Place">
+            <summary>
+            Место эксплуатации - страна/город
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Episode.InvolvementDescription">
+            <summary>
+            Вовлечение - как и кем
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Episode.WasJuvenile">
+            <summary>
+            Был_а ли несовершеннолетней на момент вовлечения/эксплуатации/насилия
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Episode.Duration">
+            <summary>
+            Продолжительность эксплуатации
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Episode.ControlMethods">
+            <summary>
+            Методы контроля
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Episode.EscapeStatus">
+            <summary>
+            Освобождение
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.ExploitationEpisodes.Episode.#ctor(System.Guid,System.Boolean,System.DateTime,System.DateTime,SafeHouseAMS.BizLayer.Survivors.Survivor,SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason,System.String,System.String,System.Boolean,System.TimeSpan,SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethods,SafeHouseAMS.BizLayer.ExploitationEpisodes.EscapeStatus)">
+            <summary>
+            конструктор объекта эпизода
+            </summary>
+            <param name="id">идентификатор записис</param>
+            <param name="isDeleted">признак удаленной записи</param>
+            <param name="created">дата создания записи</param>
+            <param name="lastEdit">дата последнего изменения записи</param>
+            <param name="survivor">пострадавший к которому относится запись</param>
+            <param name="ContactReason">Вид причины обращения</param>
+            <param name="place">место эксплуатации</param>
+            <param name="involvementDescription">кем вовлечен_а</param>
+            <param name="wasJuvenile">был_а несовершеннолетним</param>
+            <param name="duration">Продолжительность эксплуатации</param>
+            <param name="ControlMethods">методы контроля</param>
+            <param name="escapeStatus">статус освобождения</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.ExploitationEpisodes.EpisodesCatalogue.GetSingleAsync(System.Guid,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.ExploitationEpisodes.EpisodesCatalogue.ApplyCommand(SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.EpisodeCommand,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.ExploitationEpisodes.EpisodesCatalogue.GetAllBySurvivor(System.Guid,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.EscapeStatus">
+            <summary>
+            Статус освобождения
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.EscapeStatus.None">
+            <summary>
+            не указано
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.EscapeStatus.EscapeNeeded">
+            <summary>
+            требуется освобождение
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.EscapeStatus.SelfEscaped">
+            <summary>
+            самостоятельно
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.EscapeStatus.PoliceReleased">
+            <summary>
+            при помощи полиции
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.EscapeStatus.OtherPeopleReleased">
+            <summary>
+            при помощи других лиц и организаций
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.ForcedLabourType">
+            <summary>
+            виды принудительного труда
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ForcedLabourType.None">
+            <summary>
+            дефолтное значение
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ForcedLabourType.Construction">
+            <summary>
+            строительство
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ForcedLabourType.Agriculture">
+            <summary>
+            сельское хозяйство
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ForcedLabourType.CarRepair">
+            <summary>
+            автосервис
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ForcedLabourType.Workhouse">
+            <summary>
+            работный дом
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ForcedLabourType.RehabilitationCentre">
+            <summary>
+            ребцентр
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ForcedLabourType.DomesticWork">
+            <summary>
+            домашний труд
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ForcedLabourType.Manufacturing">
+            <summary>
+            производство
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ForcedLabourType.Other">
+            <summary>
+            иное
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.ForcedMarriageKind">
+            <summary>
+            Вид принудительного брака
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ForcedMarriageKind.Threat">
+            <summary>
+            Угрозы
+            </summary>
+        </member>
+        <member name="F:SafeHouseAMS.BizLayer.ExploitationEpisodes.ForcedMarriageKind.Committed">
+            <summary>
+            совершившийся
+            </summary>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.IEpisodesCatalogue">
+            <summary>
+            агрегат эпизодов эксплуатации
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.ExploitationEpisodes.IEpisodesCatalogue.GetAllBySurvivor(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            получить все эпизоды по пострадавшему
+            </summary>
+            <param name="survivorId">идентификатор пострадавшего</param>
+            <param name="cancellationToken">токен отмены операции</param>
+            <returns>асинхронная последовательность записей эпизодов эксплуатации относящихся к пострадавшему</returns>
+        </member>
+        <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.IEpisodesRepository">
+            <summary>
+            репозиторий эпизодов эксплуатации
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.ExploitationEpisodes.IEpisodesRepository.Create(System.Guid,System.Boolean,System.DateTime,System.DateTime,System.Guid,SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason,System.String,System.String,System.Boolean,System.TimeSpan,SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethods,SafeHouseAMS.BizLayer.ExploitationEpisodes.EscapeStatus)">
+            <summary>
+            создать новую запись
+            </summary>
+            <param name="id">идентификатор записи</param>
+            <param name="isDeleted">признак удалённой записи</param>
+            <param name="created">дата создания</param>
+            <param name="lastEdit">дата последнего редактирования</param>
+            <param name="survivorId">идентификатор пострадавшего</param>
+            <param name="contactReason">причина обращения - вид эксплуатации</param>
+            <param name="place">место эксплуатации</param>
+            <param name="involvement">кем вовлекалась</param>
+            <param name="wasJuvenile">несовершеннолетняя в момент обрщения</param>
+            <param name="duration">продолжительность эксплуатации</param>
+            <param name="controlMethods">методы контроля</param>
+            <param name="escapeStatus">статус освобождения</param>
+            <returns></returns>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.ExploitationEpisodes.IEpisodesRepository.GetSingleAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Получить отдельный эпизод по его идентификатору
+            </summary>
+            <param name="id">идентификатор документа</param>
+            <param name="cancellationToken">токен отмены операции</param>
+            <returns>эпизод, или null - если по такому идентификатору ничего не удалось найти</returns>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.ExploitationEpisodes.IEpisodesRepository.GetAllBySurvivor(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            получить все эпизоды по пострадавшему
+            </summary>
+            <param name="survivorId">идентификатор пострадавшего</param>
+            <param name="cancellationToken">токен отмены операции</param>
+            <returns>асинхронная последовательность записей эпизодов эксплуатации относящихся к пострадавшему</returns>
+        </member>
         <member name="T:SafeHouseAMS.BizLayer.ICommand">
             <summary>
             Интерфейс команды
@@ -87,7 +723,7 @@
             </summary>
             <param name="id">Идентификатор сущности</param>
             <param name="cancellationToken">Токен отмены</param>
-            <returns>Найденая сущность</returns>
+            <returns>Найденая сущность, или null - если по идентификатору ничего найти не удалось</returns>
         </member>
         <member name="M:SafeHouseAMS.BizLayer.IDomainAggregate`2.ApplyCommand(`1,System.Threading.CancellationToken)">
             <summary>

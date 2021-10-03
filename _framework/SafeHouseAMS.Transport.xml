@@ -35,6 +35,138 @@
             байты guid
             </summary>
         </member>
+        <member name="T:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.EpisodeReflection">
+            <summary>Holder for reflection information generated from Models/ExploitationEpisodes/Episode.proto</summary>
+        </member>
+        <member name="P:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.EpisodeReflection.Descriptor">
+            <summary>File descriptor for Models/ExploitationEpisodes/Episode.proto</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Episode.IDFieldNumber">
+            <summary>Field number for the "ID" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Episode.IsDeletedFieldNumber">
+            <summary>Field number for the "IsDeleted" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Episode.CreatedFieldNumber">
+            <summary>Field number for the "Created" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Episode.LastEditFieldNumber">
+            <summary>Field number for the "LastEdit" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Episode.SurvivorFieldNumber">
+            <summary>Field number for the "Survivor" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Episode.ContactReasonFieldNumber">
+            <summary>Field number for the "ContactReason" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Episode.PlaceFieldNumber">
+            <summary>Field number for the "Place" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Episode.InvolvementDescriptionFieldNumber">
+            <summary>Field number for the "InvolvementDescription" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Episode.WasJuvenileFieldNumber">
+            <summary>Field number for the "WasJuvenile" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Episode.DurationFieldNumber">
+            <summary>Field number for the "Duration" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Episode.ControlMethodsFieldNumber">
+            <summary>Field number for the "ControlMethods" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Episode.EscapeStatusFieldNumber">
+            <summary>Field number for the "EscapeStatus" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.ContactReason.InvolvementFieldNumber">
+            <summary>Field number for the "Involvement" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.ContactReason.CseFieldNumber">
+            <summary>Field number for the "Cse" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.ContactReason.ForcedLabourFieldNumber">
+            <summary>Field number for the "ForcedLabour" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.ContactReason.ForcedMarriageFieldNumber">
+            <summary>Field number for the "ForcedMarriage" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.ContactReason.CreFieldNumber">
+            <summary>Field number for the "Cre" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.ContactReason.BeggingFieldNumber">
+            <summary>Field number for the "Begging" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.ContactReason.ForcedCriminalActivityFieldNumber">
+            <summary>Field number for the "ForcedCriminalActivity" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.ContactReason.OtherExploitationKindFieldNumber">
+            <summary>Field number for the "OtherExploitationKind" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.ContactReason.SexualViolenceFieldNumber">
+            <summary>Field number for the "SexualViolence" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.ContactReason.DomesticViolenceFieldNumber">
+            <summary>Field number for the "DomesticViolence" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.ContactReason.OtherViolenceKindFieldNumber">
+            <summary>Field number for the "OtherViolenceKind" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.DetailedContactReason.DetailsFieldNumber">
+            <summary>Field number for the "Details" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.DetailedContactReasonTyped.DetailsFieldNumber">
+            <summary>Field number for the "Details" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.DetailedContactReasonTyped.TypeFieldNumber">
+            <summary>Field number for the "Type" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.ControlMethods.MethodsFieldNumber">
+            <summary>Field number for the "Methods" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.ControlMethods.DebtKindFieldNumber">
+            <summary>Field number for the "DebtKind" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.ControlMethods.OtherDetailsFieldNumber">
+            <summary>Field number for the "OtherDetails" field.</summary>
+        </member>
+        <member name="T:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.EpisodeCommandReflection">
+            <summary>Holder for reflection information generated from Models/ExploitationEpisodes/EpisodeCommand.proto</summary>
+        </member>
+        <member name="P:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.EpisodeCommandReflection.Descriptor">
+            <summary>File descriptor for Models/ExploitationEpisodes/EpisodeCommand.proto</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.CreateEpisode.EntityIDFieldNumber">
+            <summary>Field number for the "EntityID" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.CreateEpisode.SurvivorIDFieldNumber">
+            <summary>Field number for the "SurvivorID" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.CreateEpisode.ContactReasonFieldNumber">
+            <summary>Field number for the "ContactReason" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.CreateEpisode.PlaceFieldNumber">
+            <summary>Field number for the "Place" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.CreateEpisode.InvolvementFieldNumber">
+            <summary>Field number for the "Involvement" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.CreateEpisode.WasJuvenileFieldNumber">
+            <summary>Field number for the "WasJuvenile" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.CreateEpisode.DurationFieldNumber">
+            <summary>Field number for the "Duration" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.CreateEpisode.ControlMethodsFieldNumber">
+            <summary>Field number for the "ControlMethods" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.CreateEpisode.EscapeStatusFieldNumber">
+            <summary>Field number for the "EscapeStatus" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.EpisodeCommand.CreateFieldNumber">
+            <summary>Field number for the "Create" field.</summary>
+        </member>
+        <member name="T:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.EpisodeCommand.CommandOneofCase">
+            <summary>Enum of possible cases for the "Command" oneof.</summary>
+        </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.AddEducationLevelReflection">
             <summary>Holder for reflection information generated from Models/LifeSituations/Commands/AddEducationLevel.proto</summary>
         </member>

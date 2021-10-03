@@ -33,6 +33,18 @@
             Выполнить все ожидающие миграции
             </summary>
         </member>
+        <member name="M:SafeHouseAMS.DataLayer.Models.ExploitationEpisodes.EpisodeDAL.BuildContactReason">
+            <summary>
+            свернуть поля текущего объекта в тип ContactReason
+            </summary>
+            <returns>получившийся ContactReason</returns>
+        </member>
+        <member name="M:SafeHouseAMS.DataLayer.Models.ExploitationEpisodes.EpisodeDAL.UpdateContactReason(SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason)">
+            <summary>
+            обновить текущий объект новым ContactReason
+            </summary>
+            <param name="contactReason">новая свертка</param>
+        </member>
         <member name="T:SafeHouseAMS.DataLayer.Models.LifeSituations.BaseRecordDAL">
             <summary>
             Класс-заголовок

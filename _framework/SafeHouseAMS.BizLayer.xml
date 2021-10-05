@@ -135,6 +135,60 @@
             </summary>
             <param name="entityID">идентификатор эпизода</param>
         </member>
+        <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.UpdateEpisode">
+            <summary>
+            Обновить эпизод
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.UpdateEpisode.ContactReason">
+            <summary>
+            Причина обращения - виды эксплуатации или насилия с описанием
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.UpdateEpisode.Place">
+            <summary>
+            Место эксплуатации - страна/город
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.UpdateEpisode.Involvement">
+            <summary>
+            Вовлечение - как и кем
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.UpdateEpisode.WasJuvenile">
+            <summary>
+            Был_а ли несовершеннолетней на момент вовлечения/эксплуатации/насилия
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.UpdateEpisode.Duration">
+            <summary>
+            Продолжительность эксплуатации
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.UpdateEpisode.ControlMethods">
+            <summary>
+            Методы контроля
+            </summary>
+        </member>
+        <member name="P:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.UpdateEpisode.EscapeStatus">
+            <summary>
+            Освобождение
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.UpdateEpisode.#ctor(System.Guid,SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason,System.String,System.String,System.Boolean,System.TimeSpan,SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethods,SafeHouseAMS.BizLayer.ExploitationEpisodes.EscapeStatus)">
+            <summary>
+            конструктор команды создания нового эпизода
+            </summary>
+            <param name="entityID">идентификтаор эпизода</param>
+            <param name="contactReason"></param>
+            <param name="place"></param>
+            <param name="involvement"></param>
+            <param name="wasJuvenile"></param>
+            <param name="duration"></param>
+            <param name="controlMethods"></param>
+            <param name="escapeStatus"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
         <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason">
             <summary>
             Причина обращения
@@ -678,6 +732,21 @@
             <param name="contactReason">причина обращения - вид эксплуатации</param>
             <param name="place">место эксплуатации</param>
             <param name="involvement">кем вовлекалась</param>
+            <param name="wasJuvenile">несовершеннолетняя в момент обрщения</param>
+            <param name="duration">продолжительность эксплуатации</param>
+            <param name="controlMethods">методы контроля</param>
+            <param name="escapeStatus">статус освобождения</param>
+            <returns></returns>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.ExploitationEpisodes.IEpisodesRepository.Update(System.Guid,System.DateTime,SafeHouseAMS.BizLayer.ExploitationEpisodes.ContactReason,System.String,System.String,System.Boolean,System.TimeSpan,SafeHouseAMS.BizLayer.ExploitationEpisodes.ControlMethods,SafeHouseAMS.BizLayer.ExploitationEpisodes.EscapeStatus)">
+            <summary>
+            Обновить запись
+            </summary>
+            <param name="entityID">идентификатор записи</param>
+            <param name="editTimestamp">дата-время редактирования записи</param>
+            <param name="contactReason">причина обращения</param>
+            <param name="place">место эксплуатации</param>
+            <param name="involvement">описание вовлечения</param>
             <param name="wasJuvenile">несовершеннолетняя в момент обрщения</param>
             <param name="duration">продолжительность эксплуатации</param>
             <param name="controlMethods">методы контроля</param>

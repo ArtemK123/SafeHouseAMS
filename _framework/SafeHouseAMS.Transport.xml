@@ -161,8 +161,35 @@
         <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.CreateEpisode.EscapeStatusFieldNumber">
             <summary>Field number for the "EscapeStatus" field.</summary>
         </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.UpdateEpisode.EntityIDFieldNumber">
+            <summary>Field number for the "EntityID" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.UpdateEpisode.ContactReasonFieldNumber">
+            <summary>Field number for the "ContactReason" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.UpdateEpisode.PlaceFieldNumber">
+            <summary>Field number for the "Place" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.UpdateEpisode.InvolvementFieldNumber">
+            <summary>Field number for the "Involvement" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.UpdateEpisode.WasJuvenileFieldNumber">
+            <summary>Field number for the "WasJuvenile" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.UpdateEpisode.DurationFieldNumber">
+            <summary>Field number for the "Duration" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.UpdateEpisode.ControlMethodsFieldNumber">
+            <summary>Field number for the "ControlMethods" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.UpdateEpisode.EscapeStatusFieldNumber">
+            <summary>Field number for the "EscapeStatus" field.</summary>
+        </member>
         <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.EpisodeCommand.CreateFieldNumber">
             <summary>Field number for the "Create" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.EpisodeCommand.UpdateFieldNumber">
+            <summary>Field number for the "Update" field.</summary>
         </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.EpisodeCommand.CommandOneofCase">
             <summary>Enum of possible cases for the "Command" oneof.</summary>

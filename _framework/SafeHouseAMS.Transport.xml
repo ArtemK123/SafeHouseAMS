@@ -185,11 +185,17 @@
         <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.UpdateEpisode.EscapeStatusFieldNumber">
             <summary>Field number for the "EscapeStatus" field.</summary>
         </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.DeleteEpisode.EntityIDFieldNumber">
+            <summary>Field number for the "EntityID" field.</summary>
+        </member>
         <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.EpisodeCommand.CreateFieldNumber">
             <summary>Field number for the "Create" field.</summary>
         </member>
         <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.EpisodeCommand.UpdateFieldNumber">
             <summary>Field number for the "Update" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.EpisodeCommand.DeleteFieldNumber">
+            <summary>Field number for the "Delete" field.</summary>
         </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.ExploitationEpisodes.Commands.EpisodeCommand.CommandOneofCase">
             <summary>Enum of possible cases for the "Command" oneof.</summary>

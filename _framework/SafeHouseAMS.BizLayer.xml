@@ -124,6 +124,17 @@
             <param name="escapeStatus"></param>
             <exception cref="T:System.ArgumentNullException"></exception>
         </member>
+        <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.DeleteEpisode">
+            <summary>
+            команда удаления эпизода
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.DeleteEpisode.#ctor(System.Guid)">
+            <summary>
+            конструктор команды
+            </summary>
+            <param name="entityID">идентификатор эпизода для удаления</param>
+        </member>
         <member name="T:SafeHouseAMS.BizLayer.ExploitationEpisodes.Commands.EpisodeCommand">
             <summary>
             базовый класс команды изменения эпизодов эксплуатации
@@ -768,6 +779,12 @@
             <param name="survivorId">идентификатор пострадавшего</param>
             <param name="cancellationToken">токен отмены операции</param>
             <returns>асинхронная последовательность записей эпизодов эксплуатации относящихся к пострадавшему</returns>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.ExploitationEpisodes.IEpisodesRepository.Delete(System.Guid)">
+            <summary>
+            Удалить эпизод
+            </summary>
+            <param name="episodeId">идентификатор удаляемого эпизода</param>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.ICommand">
             <summary>

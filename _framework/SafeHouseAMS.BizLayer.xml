@@ -954,6 +954,17 @@
             <param name="survivorID">идентификатор пострадавшего</param>
             <param name="documentDate">дата документа</param>
         </member>
+        <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.DeleteDocument">
+            <summary>
+            Команда удаления документа
+            </summary>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.Commands.DeleteDocument.#ctor(System.Guid)">
+            <summary>
+            default ctor
+            </summary>
+            <param name="entityID">идентификатор документа для удаления</param>
+        </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.Commands.LifeSituationDocumentCommand">
             <summary>
             Базовая команда изменения документа жизненной ситуации
@@ -1503,6 +1514,12 @@
             <param name="cancellationToken">токен отмены</param>
             <typeparam name="T">Тип записи</typeparam>
             <returns>Асинхронная последовательность элементов истории изменения статуса</returns>
+        </member>
+        <member name="M:SafeHouseAMS.BizLayer.LifeSituations.ILifeSituationDocumentsRepository.DeleteDocument(System.Guid)">
+            <summary>
+            удалить доумент
+            </summary>
+            <param name="entityID">идентификатор документа</param>
         </member>
         <member name="T:SafeHouseAMS.BizLayer.LifeSituations.InquirySources.ForwardedByOrganization">
             <summary>

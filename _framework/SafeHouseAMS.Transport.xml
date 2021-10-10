@@ -269,6 +269,15 @@
         <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.CreateRecordUpdateDocument.TypeFieldNumber">
             <summary>Field number for the "Type" field.</summary>
         </member>
+        <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.DeleteDocumentReflection">
+            <summary>Holder for reflection information generated from Models/LifeSituations/Commands/DeleteDocument.proto</summary>
+        </member>
+        <member name="P:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.DeleteDocumentReflection.Descriptor">
+            <summary>File descriptor for Models/LifeSituations/Commands/DeleteDocument.proto</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.DeleteDocument.EntityIDFieldNumber">
+            <summary>Field number for the "EntityID" field.</summary>
+        </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.LifeSituationDocumentCommandReflection">
             <summary>Holder for reflection information generated from Models/LifeSituations/Commands/LifeSituationDocumentCommand.proto</summary>
         </member>
@@ -307,6 +316,9 @@
         </member>
         <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.LifeSituationDocumentCommand.CreateRecordUpdateDocumentFieldNumber">
             <summary>Field number for the "CreateRecordUpdateDocument" field.</summary>
+        </member>
+        <member name="F:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.LifeSituationDocumentCommand.DeleteDocumentFieldNumber">
+            <summary>Field number for the "DeleteDocument" field.</summary>
         </member>
         <member name="T:SafeHouseAMS.Transport.Protos.Models.LifeSituations.Commands.LifeSituationDocumentCommand.CommandOneofCase">
             <summary>Enum of possible cases for the "Command" oneof.</summary>

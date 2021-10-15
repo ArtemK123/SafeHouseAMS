@@ -50,7 +50,7 @@
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-hNl8iqfAyBbbi5beUQrD8YE0aIHK9OlEgG8nQ2sJXcQ=",
       "Npgsql.dll": "sha256-T3pnG6C559xFVr\/P+l55eAqnVhmA2HmLvz5nyHiihMk=",
       "Npgsql.EntityFrameworkCore.PostgreSQL.dll": "sha256-ZBoUdLaqhwqEsIT7+AHThIjoQsZMHpxE7e08SNe2Ae0=",
-      "Radzen.Blazor.dll": "sha256-2geRI1CuwT2EhwiJe0tJXd\/b55nBiXvccOGzmP45dkw=",
+      "Radzen.Blazor.dll": "sha256-k7y5SdU+4MYGtNK4MtlsdaXTzNUSEiwd7qFPz7w8dkI=",
       "Serilog.dll": "sha256-wH3IsHPut+LkfEWNN6C7cxJKZtqfsA7Y1VxtnPwa\/04=",
       "Serilog.Extensions.Logging.dll": "sha256-kUc8+c3PlPTr9GiQJJzwmNC91ybDAXf0KFn3MQTKpVo=",
       "Serilog.Settings.Configuration.dll": "sha256-Mxc7SMslIEGocehny7jhem3dh1swkKWQMIa36jB4CMI=",
@@ -60,7 +60,7 @@
       "SafeHouseAMS.BizLayer.dll": "sha256-3hMu6VSkySQSlv8cGJe03xMNbTAdPykPof9A+bShgi8=",
       "SafeHouseAMS.DataLayer.dll": "sha256-eTQulx6J39Blqn\/IQsvVGxqa31RcaaC4KNtKnLPYydY=",
       "SafeHouseAMS.Transport.dll": "sha256-BqEiMSOl7kDaoEKfFwi9B7bxYCUxDwn42S3himxG7GY=",
-      "SafeHouseAMS.WasmApp.dll": "sha256-Oc\/dgEXtBrk9Wa9tF82gjAJ9\/b2F\/AIcIYrb40lhhyM=",
+      "SafeHouseAMS.WasmApp.dll": "sha256-Y\/0pVapKc1Fqtpnwv4peRIFY5ya+q8OW2ZOYMEHwNyU=",
       "Microsoft.CSharp.dll": "sha256-sjlYPN35\/kzNhwgISMrW5LV9Xyc0tCK9ClyGUPy52MI=",
       "Microsoft.Win32.Primitives.dll": "sha256-6Qc1ydaqIzVSgeug7plhyw1i7y+sUMQDBqABI\/ktOWo=",
       "System.Collections.Concurrent.dll": "sha256-8GUIDj7M2JadfSDE8COiLZIlHh97\/D5YpN+bzy\/fMCw=",
@@ -112,7 +112,7 @@
       "System.Threading.Channels.dll": "sha256-TU5zsM3D445d1nrEMuYWSJcZC9Dlubc0y21+AYfxT3A=",
       "System.Transactions.Local.dll": "sha256-zCKsJ7yLI2lHxNNtxv\/7+2JPwFj2US3BghS+eCUddNw=",
       "System.Web.HttpUtility.dll": "sha256-HJ9QSKVvkcWALGpgl42i6lQxixqYXzWFxcsbJrlzG2k=",
-      "System.Private.CoreLib.dll": "sha256-pHNvK\/\/5ZD06EgM6\/++9EKWZzsCKQtyJiqsek4Bf2VY="
+      "System.Private.CoreLib.dll": "sha256-WhStpH6nQBuYQR7pJbnI6Szh0TSbAOzZzMit2B34l+o="
     },
     "lazyAssembly": null,
     "pdb": null,

@@ -280,6 +280,12 @@ window.Radzen = {
           : e.pageX - handle.getBoundingClientRect().left;
       var percent = (handle.offsetLeft + offsetX) / parent.offsetWidth;
 
+      if (percent > 1) {
+          percent = 1;
+      } else if (percent < 0) {
+          percent = 0;
+      }
+
       var newValue = percent * (max - min) + min;
       var oldValue = range ? value[slider.isMin ? 0 : 1] : value;
 
@@ -326,7 +332,7 @@ window.Radzen = {
 
     document.addEventListener('mousemove', Radzen[id].mouseMoveHandler);
     document.addEventListener('touchmove', Radzen[id].mouseMoveHandler, {
-      passive: true
+      passive: false, capture: true
     });
 
     document.addEventListener('mouseup', Radzen[id].mouseUpHandler);
